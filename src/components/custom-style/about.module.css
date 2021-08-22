@@ -1,0 +1,102 @@
+.indexWrapper {
+  margin: 0 auto;
+  width: 70%;
+  display: block;
+
+  justify-content: center;
+  align-items: center;
+}
+
+.page {
+  max-width: 1170px;
+  text-transform: capitalize;
+  margin: 0 auto;
+  padding-bottom: 3rem;
+  display: flex;
+  flex-wrap: wrap;
+  font-weight: 300;
+}
+
+.page article {
+  position: relative;
+  /* margin: 1rem 0; */
+  /* margin-bottom: 1rem; */
+  display: inline-flex;
+}
+
+.indeximages {
+  width: 17rem;
+  height: 12rem;
+  margin: 0 auto;
+}
+
+@media (min-width: 1281px) {
+  .indeximages {
+    width: 17rem;
+    height: 12rem;
+    margin: 1rem;
+    /* margin: 1rem; */
+  }
+}
+
+@media (min-width: 1000px) and (max-width: 1280px) {
+  .page {
+    display: flex;
+    justify-content: center;
+  }
+  .indeximages {
+    width: 17rem;
+    height: 12rem;
+    margin-bottom: 1rem;
+    margin-left: 1rem;
+    /* margin: 1rem; */
+  }
+}
+
+@media (min-width: 768px) and (max-width: 999px) {
+  .indeximages {
+    width: 18rem;
+    height: 12rem;
+    margin-right: 1rem;
+    margin-bottom: 1rem;
+    /* margin: 1rem; */
+  }
+}
+
+@media (min-width: 750px) and (max-width: 999px) {
+  .page {
+    padding-left: auto;
+    padding-right: auto;
+    display: flex;
+    justify-content: center;
+  }
+}
+
+@media (min-width: 481px) and (max-width: 767px) {
+  .page article {
+    margin: 0.5rem;
+  }
+  .indeximages {
+    width: 18rem;
+    height: 13rem;
+  }
+}
+
+/* 
+      ##Device = Most of the Smartphones Mobiles (Portrait)
+      ##Screen = B/w 320px to 479px
+    */
+
+@media (min-width: 320px) and (max-width: 480px) {
+  .page {
+    margin: 0 auto;
+  }
+  .indeximages {
+    width: 19rem;
+    height: 13rem;
+  }
+  .page article {
+    /* padding-left: 1.5rem; */
+    padding-bottom: 1rem;
+  }
+}

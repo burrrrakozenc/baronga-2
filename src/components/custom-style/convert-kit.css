@@ -1,0 +1,12 @@
+@media screen and (max-width: 700px) {
+  .convert-kit-form {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    min-height: 17rem;
+  }
+  .convert-kit-form-item {
+    min-width: 90vw;
+    /* padding-bottom: 0.5rem; */
+  }
+}

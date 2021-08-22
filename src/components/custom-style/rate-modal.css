@@ -1,0 +1,47 @@
+.modal-input {
+  background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="40" height="30"><text x="5" y="19" style="font: bold 16px Arial;">Age:</text></svg>')
+    no-repeat;
+  border: 1px solid #555;
+  box-sizing: border-box;
+  font: 16px 'Arial';
+  height: 30px;
+  padding-left: 50px;
+  width: 300px;
+  display: none;
+}
+
+.convert-kit-form-item-2 {
+  width: 20vw;
+  height: 50px;
+  flex-direction: row;
+  padding: 10px;
+}
+
+.convert-kit-form-item-3 {
+  width: 50vw;
+  height: 50px;
+  flex-direction: row;
+  padding: 10px;
+}
+.subs-form-group {
+  flex-direction: row;
+}
+
+@media only screen and (max-width: 768px) {
+  .convert-kit-form-item-2 {
+    width: 80vw;
+    flex-direction: column;
+    height: 50px;
+  }
+
+  .convert-kit-form-item-3 {
+    width: 80vw;
+    flex-direction: column;
+    height: 50px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+  }
+  .subs-form-group {
+    flex-direction: column;
+  }
+}
