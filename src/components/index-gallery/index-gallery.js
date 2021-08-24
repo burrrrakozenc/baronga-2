@@ -1,25 +1,46 @@
 import React from 'react';
 // import { useRef, useEffect, useDispatch,useState} from 'react'
-import RBCarousel from 'react-bootstrap-carousel';
-import { Row, Col } from './bootstrap-component.js';
-import 'react-bootstrap-carousel/dist/react-bootstrap-carousel.css';
+// import RBCarousel from 'react-bootstrap-carousel';
+// import { Row, Col } from './bootstrap-component.js';
+// import 'react-bootstrap-carousel/dist/react-bootstrap-carousel.css';
 import { Link } from 'gatsby';
-import { Swipeable } from 'react-swipeable'
-import { Swiper, SwiperSlide } from 'swiper/react';
-// import { useSwipeable } from "react-swipeable";
+import 'react-responsive-carousel/lib/styles/carousel.min.css';
+// import { useSwipeable, SwipeEventData } from 'react-swipeable';
+// import { Swiper, SwiperSlide } from 'swiper/react';
+// import { Swipeable } from "react-swipeable";
+import { Carousel } from 'react-responsive-carousel';
 import Pratama from '../../images/pratama.jpg';
-import Fil from '../../images/fil.jpg';
+import Fil from '../../images/fil_3.jpg';
 import TasHeykel from '../../images/tasHeykel.jpg';
 import Dancer from '../../images/dancer.png';
 import './../custom-style/font.css';
 import './../custom-style/index-gallery.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import ReactSwipe from "react-swipe";
+// import Swipe from 'react-easy-swipe'
+// import ReactSwipe from "react-swipe";
+// import { Swiper, SwiperSlide } from 'swiper/react';
+// import 'swiper/swiper.scss';
 // import '@fontsource/exo-2/latin-ext.css';
 
 // const styles = { height: 500, width: '100%' };
 // const icon_glass = <span className="fa fa-glass" />;
 // const icon_music = <span className="fa fa-music" />;
+
+// const scrollContainer = useRef(null)
+//     const [scrolled, setScrolled] = useState(false)
+
+// const handlers = useSwipeable({ onSwiped: () => console.log('swiped') })
+
+//     // setup ref for your usage
+//     const myRef = React.useRef();
+
+//     const refPassthrough = (el) => {
+//       // call useSwipeable ref prop with el
+//       handlers.ref(el);
+
+//       // set myRef el so you can access it yourself
+//       myRef.current = el;
+//     }
 
 const swipeOptions = {
   startSlide: 0,
@@ -28,24 +49,24 @@ const swipeOptions = {
   disableScroll: true,
   continuous: true,
   callback() {
-    console.log("slide changed");
+    console.log('slide changed');
   },
   transitionEnd() {
-    console.log("ended transition");
-  }
+    console.log('ended transition');
+  },
 };
 
 class IndexCarousel extends React.PureComponent {
   constructor(props) {
     super(props);
-    this.carouselRef = React.createRef(); 
+    this.carouselRef = React.createRef();
     // this.slider = React.createRef();
     this.state = {
-      autoplay: false
+      autoplay: false,
     };
     // this.carouselRef= React.createRef();
   }
-  
+
   next() {
     this.reactSwipe.next();
   }
@@ -54,7 +75,6 @@ class IndexCarousel extends React.PureComponent {
     this.reactSwipe.prev();
   }
 
-  
   _onSelect = (active, direction) => {
     console.log(`active=${active} && direction=${direction}`);
   };
@@ -81,9 +101,7 @@ class IndexCarousel extends React.PureComponent {
   //     this.setState({ leftIcon, rightIcon });
   //   };
   render() {
-
-
-    // onSwipedLeft: () => {this.carouselRef.current.next()}
+    // // onSwipedLeft: () => {this.carouselRef.current.next()}
     // const handlers = useSwipeable({
     //   // onSwipedLeft: () => slide(NEXT),
     //   // onSwipedRight: () => slide(PREV),
@@ -99,64 +117,74 @@ class IndexCarousel extends React.PureComponent {
     //   }, 50);
     // };
 
+    // const handlers = useSwipeable({
+    //   onSwiped: handleSwiped,
+    //   preventDefaultTouchmoveEvent: true,
+    //   trackMouse: true
+    // });
 
+    // const dispatch = useDispatch()
+
+    //   useEffect(() => {
+    //     const resizeListener = (e) => {
+    //       if (e.target.outerWidth <= sizes.mobile) {
+    //         setScrolled(null)
+    //       } else {
+    //         setScrolled(false)
+    //       }
+    //     }
+    //     window.addEventListener('resize', resizeListener)
+    //     return () => {
+    //       window.removeEventListener('resize', resizeListener)
+    //     }
+    //   }, [])
+
+    //   useEffect(() => {
+    //     if (scrolled) {
+    //       scrollTo(scrollContainer.current, scrollContainer.current.offsetWidth)
+    //     } else {
+    //       scrollTo(scrollContainer.current, 0)
+    //     }
+    //   }, [scrolled])
 
     return (
-      <div style={{ paddingBottom: 20 }}>
-
-        <Row>
-          <Col span={12} style={{ marginTop: -20 }}>
-            {/* <Swipeable
-              trackMouse
-              preventDefaultTouchmoveEvent
-              onSwipedLeft={() => this.onSwiped(LEFT)}
-              onSwipedRight={() => this.onSwiped(RIGHT)}
-
-            > */}
-     
-     {/* <Swiper
-spaceBetween={50}
-slidesPerView={3}
-navigation
-pagination={{ clickable: true }}
-scrollbar={{ draggable: true }}
-onSwiper={(swiper) => console.log(swiper)}
-onSlideChange={() => console.log('slide change')}
-> */}
-              <RBCarousel
+      <Carousel>
+        {/* <RBCarousel
                 animation={true}
                 // autoplay={this.state.autoplay}
                 // slideshowSpeed={2000}
-                // defaultActiveIndex={0}
-                //   leftIcon={this.state.leftIcon}
-                //   rightIcon={this.state.rightIcon}
+                defaultActiveIndex={0}
+                  leftIcon={this.state.leftIcon}
+                  rightIcon={this.state.rightIcon}
                 onSelect={this._onSelect}
-                // ref={this.slider}
+                ref={this.slider}
                 version={4}
-                touch={true}
-                // ref={this.carouselRef}
-                >
-                  <ReactSwipe
-          ref={reactSwipe => (this.reactSwipe = reactSwipe)}
-          className="mySwipe"
-          swipeOptions={swipeOptions}
-        >
-                  {/* <Swipeable onSwipedLeft={() => setScrolled(true)} onSwipedRight={() => setScrolled(false)} trackMouse={true}> */}
+                touch="true"
+                ref={this.carouselRef}
+                data-touch="true"
+                data-role="touch"
+                > */}
+        {/* <Swiper
+      spaceBetween={50}
+      slidesPerView={1}
+      onSlideChange={() => console.log('slide change')}
+      onSwiper={(swiper) => console.log(swiper)}> */}
 
-                <div style={{ height: 500 }}>
-                {/* <SwiperSlide> */}
-                  {/* <Link to="/"> */}
-                    <img
-                      style={{
-                        width: '100%',
-                        height: '100%',
-                        objectFit: 'cover',
-                      }}
-                      src={Fil}
-                      alt=""
-                    />
+        {/* <SwiperSlide> */}
+        {/* <div className="carousel-image-style"> */}
+        <div>
+          {/* <Link to="/"> */}
+          <img
+            style={{
+              width: '100%',
+              height: '100%',
+              // objectFit: 'cover',
+            }}
+            src={Fil}
+            alt=""
+          />
 
-                    <div
+          {/* <div
                       className="text-right carousel-group-x"
                       style={{
                         position: 'absolute',
@@ -202,13 +230,20 @@ onSlideChange={() => console.log('slide change')}
                           position: 'absolute',
                           opacity: 0.7,
                         }}
-                      />
-                    </div>
-                  {/* </Link> */}
-                {/* </SwiperSlide> */}
-                </div>
+                      /> */}
+          {/* </div> */}
+          {/* </Link> */}
+        </div>
+        {/* </div> */}
+        {/* </SwiperSlide>
+                <SwiperSlide> */}
+        {/* <div className="carousel-image-style"> */}
+        <div>
+          <img style={{ width: '100%', height: '100%' }} src={Pratama} alt="" />
+          {/* </div> */}
+          {/* </SwiperSlide> */}
+          {/* <SwiperSlide>
                 <div style={{ height: 500 }}>
-                {/* <SwiperSlide> */}
                   <img
                     style={{ width: '100%', height: '100%', objectFit: 'cover' }}
                     src={Pratama}
@@ -262,10 +297,10 @@ onSlideChange={() => console.log('slide change')}
                       }}
                     />
                   </div>
-                {/* </SwiperSlide> */}
                 </div>
+                </SwiperSlide>
+                <SwiperSlide>
                 <div style={{ height: 500 }}>
-                {/* <SwiperSlide> */}
                   <img
                     style={{ width: '100%', height: '100%', objectFit: 'cover' }}
                     src={TasHeykel}
@@ -320,10 +355,10 @@ onSlideChange={() => console.log('slide change')}
                       }}
                     />
                   </div>
-                {/* </SwiperSlide> */}
                 </div>
+                </SwiperSlide>
+                <SwiperSlide>
                 <div style={{ height: 500 }}>
-                {/* <SwiperSlide> */}
                   <img
                     style={{ width: '100%', height: '100%', objectFit: 'cover' }}
                     src={Dancer}
@@ -373,19 +408,14 @@ onSlideChange={() => console.log('slide change')}
                           zIndex: '1000',
                         }}
                       />
-                      {/* <iframe width="1031" height="580" src="https://www.youtube.com/embed/DPQ7SXMHljQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> */}
                     </p>
                   </div>
-                {/* </SwiperSlide> */}
                 </div>
-                </ReactSwipe>
-              </RBCarousel>
-                {/* </Swiper> */}
-              
-            {/* </Swipeable> */}
-          </Col>
-        </Row>
-      </div>
+                </SwiperSlide> */}
+        </div>
+
+        {/* </Swiper> */}
+      </Carousel>
     );
   }
 }
