@@ -8,7 +8,7 @@ import styles from "./all-products.style";
 
 const productStaticQuery = graphql`
 	query {
-		allShopifyProduct(limit: 20) {
+		allShopifyProduct {
 			edges {
 				node {
 					id

@@ -30,14 +30,14 @@ import LikeCount from '../components/subscribe/like-count'
 
 
 const ProductPage: React.FC<any> = ({
-	data: { shopifyProduct, shopifyCollection, prismic, customApi },
+	data: { shopifyProduct, allShopifyProduct, prismic, customApi },
 	location: { href },
 }) => {
 	let product = shopifyProduct;
 	product.listView = false;
 
 	const productLike = customApi?.total_subscriptions;
-	const categoryProducts = shopifyCollection?.products || [];
+	const categoryProducts = allShopifyProduct?.nodes || [];
 	const {
 		title,
 		price,
@@ -149,6 +149,7 @@ const ProductPage: React.FC<any> = ({
 			style: 'currency',
 		}).format(parseFloat(price && price.amount ? price.amount : 0));
 
+		console.log(categoryProducts)
 	return (
 		// <SimpleReactLightbox>
 		<PrimaryLayout
@@ -191,10 +192,11 @@ const ProductPage: React.FC<any> = ({
 
 									<LikeCount shopifyHandle={product?.handle} />
 									{/* className={product?.images.length > 1 ? 'has-items' : ''} */}
-							&nbsp;&nbsp;|&nbsp;
+							
 							<Link to={`/product/${product?.handle}/#ask-a-question`} sx={{
 										display: 'block',
-										paddingTop:'0.3rem'
+										paddingTop:'0.7rem',
+										paddingLeft:'1rem'
 									}}>
 										{/* <CommentIcon /> */}
 								Ürün Hakkında Soru Sor
@@ -298,7 +300,7 @@ const ProductPage: React.FC<any> = ({
 };
 
 export const pageQuery = graphql`
-	query($handle: String!) {
+	query($handle: String!, $productType: String) {
 		shopifyProduct(handle: { eq: $handle }) {
 			title
 			description
@@ -330,37 +332,37 @@ export const pageQuery = graphql`
 				}
 			}
 		}
-		shopifyCollection(products: { elemMatch: { handle: { eq: $handle } } }) {
-			products {
-				id
-				title
-				handle
-				createdAt
-				shopifyId
-				availableForSale
-				variants {
+		allShopifyProduct(filter: {productType: {eq: $productType}}, limit: 10) {
+			  nodes {
+				  id
+				  title
+				  handle
+				  createdAt
+				  shopifyId
+				  availableForSale
+				  variants {
 					id
 					price
 					priceV2 {
-						amount
-						currencyCode
+					  amount
+					  currencyCode
 					}
 					shopifyId
 					availableForSale
-				}
-				images {
+				  }
+				  images {
 					id
 					originalSrc
 					localFile {
 						childImageSharp {
-							fluid(maxWidth: 910, quality: 100) {
+							fluid(maxWidth: 910, quality: 70) {
 								...GatsbyImageSharpFluid_withWebp_tracedSVG
 							}
 						}
 					}
+				  }
 				}
-			}
-		}
+		  }
 		customApi(subscriptions: {elemMatch: {subscriber: {first_name: {eq: $handle}}}}) {
 			total_subscriptions
 		}

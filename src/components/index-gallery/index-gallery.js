@@ -11,11 +11,11 @@ import 'react-responsive-carousel/lib/styles/carousel.min.css';
 // import { Swipeable } from "react-swipeable";
 import { Carousel } from 'react-responsive-carousel';
 import Pratama from '../../images/pratama.jpg';
-import Fil from '../../images/fil_3.jpg';
+import Fil from '../../images/fil.jpg';
 import TasHeykel from '../../images/tasHeykel.jpg';
-import Dancer from '../../images/dancer.png';
+import Dancer from '../../images/finalDancer.png';
 import './../custom-style/font.css';
-// import './../custom-style/index-gallery.css';
+import './../custom-style/index-gallery.css';
 // import 'bootstrap/dist/css/bootstrap.min.css';
 // import Swipe from 'react-easy-swipe'
 // import ReactSwipe from "react-swipe";
@@ -26,36 +26,6 @@ import './../custom-style/font.css';
 // const styles = { height: 500, width: '100%' };
 // const icon_glass = <span className="fa fa-glass" />;
 // const icon_music = <span className="fa fa-music" />;
-
-// const scrollContainer = useRef(null)
-//     const [scrolled, setScrolled] = useState(false)
-
-// const handlers = useSwipeable({ onSwiped: () => console.log('swiped') })
-
-//     // setup ref for your usage
-//     const myRef = React.useRef();
-
-//     const refPassthrough = (el) => {
-//       // call useSwipeable ref prop with el
-//       handlers.ref(el);
-
-//       // set myRef el so you can access it yourself
-//       myRef.current = el;
-//     }
-
-const swipeOptions = {
-  startSlide: 0,
-  auto: 100000,
-  speed: 1000,
-  disableScroll: true,
-  continuous: true,
-  callback() {
-    console.log('slide changed');
-  },
-  transitionEnd() {
-    console.log('ended transition');
-  },
-};
 
 class IndexCarousel extends React.PureComponent {
   constructor(props) {
@@ -95,142 +65,46 @@ class IndexCarousel extends React.PureComponent {
     this.setState({ autoplay: !this.state.autoplay });
   };
 
-  //   _changeIcon = () => {
-  //     let { leftIcon, rightIcon } = this.state;
-  //     leftIcon = leftIcon ? undefined : icon_glass;
-  //     rightIcon = rightIcon ? undefined : icon_music;
-  //     this.setState({ leftIcon, rightIcon });
-  //   };
   render() {
-    // // onSwipedLeft: () => {this.carouselRef.current.next()}
-    // const handlers = useSwipeable({
-    //   // onSwipedLeft: () => slide(NEXT),
-    //   // onSwipedRight: () => slide(PREV),
-    //   preventDefaultTouchmoveEvent: true,
-    //   trackMouse: true
-    // })
-    //   const [state, dispatch] = React.useReducer(reducer, initialState);
-    // const numItems = React.Children.count(props.children);
-    // const slide = dir => {
-    //   dispatch({ type: dir, numItems });
-    //   setTimeout(() => {
-    //     dispatch({ type: "stopSliding" });
-    //   }, 50);
-    // };
-
-    // const handlers = useSwipeable({
-    //   onSwiped: handleSwiped,
-    //   preventDefaultTouchmoveEvent: true,
-    //   trackMouse: true
-    // });
-
-    // const dispatch = useDispatch()
-
-    //   useEffect(() => {
-    //     const resizeListener = (e) => {
-    //       if (e.target.outerWidth <= sizes.mobile) {
-    //         setScrolled(null)
-    //       } else {
-    //         setScrolled(false)
-    //       }
-    //     }
-    //     window.addEventListener('resize', resizeListener)
-    //     return () => {
-    //       window.removeEventListener('resize', resizeListener)
-    //     }
-    //   }, [])
-
-    //   useEffect(() => {
-    //     if (scrolled) {
-    //       scrollTo(scrollContainer.current, scrollContainer.current.offsetWidth)
-    //     } else {
-    //       scrollTo(scrollContainer.current, 0)
-    //     }
-    //   }, [scrolled])
-
     return (
-      <Carousel>
-        <div>
-          <img
-            // style={{
-            //   width: '100%',
-            //   height: '100%',
-            //   // objectFit: 'cover',
-            // }}
-            src={Fil}
-            alt=""
-          />
-
-          <section
-            className="text-right carousel-group-x"
-            style={{
-              position: 'absolute',
-              top: '40%',
-              right: '0%',
-              width: '390px',
-              height: '120px',
-              // borderStyle: 'solid',
-              color: 'white',
-              // backgroundColor: 'rgb(255, 184, 77)',
-              backgroundColor: 'black',
-              opacity: '0.5',
-              // borderRadius: '13px',
-              // display:'flex',
-              // right: '10px'
-            }}
-          >
-            <p
-              className="carousel-item-x"
-              style={{
-                // fontSize: '23px',
-                float: 'right',
-                // fontWeight:'bolder',
-                textAlign: 'center',
-                fontFamily: 'Exo 2',
-                paddingTop: '1.75rem',
-                fontWeight: 500,
-                // color:'rgb(255, 163, 26)',
-                paddingLeft: 5,
-
-                paddingRight: 45,
-              }}
-            >
-              BALİ'Lİ USTA ELLERDEN ÇIKAN EŞSİZ HEYKELLERİ KEŞFEDİN
-            </p>
-            <p
-              style={{
-                backgroundColor: '#FF5E00',
-                width: '370px',
-                height: '18px',
-                bottom: '-15%',
-                right: '0',
-                position: 'absolute',
-                opacity: 0.7,
-              }}
-            />
-          </section>
-        </div>
-
-        <div>
-          <section>
+      <div
+        className="carousel-custom"
+        style={{
+          maxHeight: '50rem',
+        }}
+      >
+        <Carousel
+          className="carousel-wrapper"
+          // dynamicHeight
+          showStatus={false}
+          showThumbs={false}
+          // autoPlay
+          infiniteLoop
+        >
+          <div>
             <img
-              style={{ width: '100%', height: '100%', objectFit: 'cover' }}
-              src={Pratama}
+              // style={{
+              //   width: '100%',
+              //   height: '100%',
+              //   // objectFit: 'cover',
+              // }}
+              src={Fil}
               alt=""
             />
-            <p
+
+            <section
               className="text-right carousel-group-x"
               style={{
                 position: 'absolute',
-                top: '36%',
+                top: '40%',
                 right: '0%',
-                width: '360px',
-                height: '140px',
+                width: '390px',
+                height: '120px',
                 // borderStyle: 'solid',
                 color: 'white',
+                // backgroundColor: 'rgb(255, 184, 77)',
                 backgroundColor: 'black',
-                // backgroundColor: 'rgb(0, 102, 0)',
-                opacity: '0.4',
+                opacity: '0.5',
                 // borderRadius: '13px',
                 // display:'flex',
                 // right: '10px'
@@ -239,42 +113,99 @@ class IndexCarousel extends React.PureComponent {
               <p
                 className="carousel-item-x"
                 style={{
-                  // fontSize: '22px',
+                  // fontSize: '23px',
                   float: 'right',
-                  paddingTop: '1.3rem',
-                  fontWeight: '500',
+                  // fontWeight:'bolder',
                   textAlign: 'center',
                   fontFamily: 'Exo 2',
-                  // paddingTop:'0.5rem',
+                  paddingTop: '1.75rem',
+                  fontWeight: 500,
                   // color:'rgb(255, 163, 26)',
-                  opacity: 1,
                   paddingLeft: 5,
-                  paddingRight: 35,
+
+                  paddingRight: 45,
                 }}
               >
-                NESİLDEN NESİLE AKTARILAN KADİM EL SANATLARINI DENEYİMLEYİN
+                BALİ'Lİ USTA ELLERDEN ÇIKAN EŞSİZ HEYKELLERİ KEŞFEDİN
               </p>
-              <div
+              <p
                 style={{
                   backgroundColor: '#FF5E00',
-                  width: '340px',
-                  height: '14px',
-                  bottom: '-9%',
+                  width: '370px',
+                  height: '18px',
+                  bottom: '-29%',
                   right: '0',
                   position: 'absolute',
-                  opacity: 0.5,
+                  opacity: 0.7,
                 }}
               />
-            </p>
-          </section>
-        </div>
-        <div>
-          <img
-            // style={{ width: '100%', height: '100%', objectFit: 'cover' }}
-            src={TasHeykel}
-            alt="2"
-          />
-          {/* <div
+            </section>
+          </div>
+
+          <div>
+            <section>
+              <img
+                style={{ width: '100%', height: '100%', objectFit: 'cover' }}
+                src={Pratama}
+                alt=""
+              />
+              <p
+                className="text-right carousel-group-x"
+                style={{
+                  position: 'absolute',
+                  top: '36%',
+                  right: '0%',
+                  width: '360px',
+                  height: '140px',
+                  // borderStyle: 'solid',
+                  color: 'white',
+                  backgroundColor: 'black',
+                  // backgroundColor: 'rgb(0, 102, 0)',
+                  opacity: '0.4',
+                  // borderRadius: '13px',
+                  // display:'flex',
+                  // right: '10px'
+                }}
+              >
+                <p
+                  className="carousel-item-x"
+                  style={{
+                    // fontSize: '22px',
+                    float: 'right',
+                    paddingTop: '1.3rem',
+                    fontWeight: '500',
+                    textAlign: 'center',
+                    fontFamily: 'Exo 2',
+                    // paddingTop:'0.5rem',
+                    // color:'rgb(255, 163, 26)',
+                    opacity: 1,
+                    paddingLeft: 5,
+                    paddingRight: 35,
+                  }}
+                >
+                  NESİLDEN NESİLE AKTARILAN KADİM EL SANATLARINI DENEYİMLEYİN
+                </p>
+                <div
+                  style={{
+                    backgroundColor: '#FF5E00',
+                    width: '340px',
+                    height: '14px',
+                    bottom: '-9%',
+                    right: '0',
+                    position: 'absolute',
+                    opacity: 0.5,
+                  }}
+                />
+              </p>
+            </section>
+          </div>
+          <div>
+            <img
+              // style={{ width: '100%', height: '100%', objectFit: 'cover' }}
+              src={TasHeykel}
+              alt="2"
+            />
+            <div
               className="text-right carousel-group-x"
               style={{
                 position: 'absolute',
@@ -310,7 +241,7 @@ class IndexCarousel extends React.PureComponent {
               >
                 SPİRİTÜEL&DEKORATİF ÜRÜNLERİMİZLE EVİNİZİN POZİTİF ENERJİSİN
                 ARTIRIN
-                  </p>
+              </p>
               <div
                 style={{
                   backgroundColor: '#FF5E00',
@@ -322,66 +253,52 @@ class IndexCarousel extends React.PureComponent {
                   opacity: 0.5,
                 }}
               />
-            </div> */}
-        </div>
+            </div>
+          </div>
 
-        <div>
-          <img
-            // style={{ width: '100%', height: '100%', objectFit: 'cover' }}
-            src={Dancer}
-            alt="3"
-          />
+          <div>
+            <img
+              // style={{ width: '100%', height: '100%', objectFit: 'cover' }}
+              src={Dancer}
+              alt="3"
+            />
 
-          <section
-            className="text-right carousel-group-x"
-            style={{
-              position: 'absolute',
-              top: '33%',
-              right: '9%',
-              width: '260px',
-              height: '160px',
-              // borderStyle:'solid',
-              // color: 'white',
-              // backgroundColor:'rgb(204, 41, 0)',
-              // opacity:'0.6',
-              // borderRadius:'13px'
-              // display:'flex',
-              // right: '10px'
-            }}
-          >
-            <p
-              className="carousel-item-x"
-              style={{
-                // fontSize: '17px',
-                float: 'right',
-                textTransform: 'uppercase',
-                // fontWeight:'bolder',
-                textAlign: 'center',
-                fontFamily: 'Exo 2',
-                // paddingTop:'0.5rem',
-                // color:'rgb(255, 163, 26)',
-                paddingLeft: 5,
-                paddingRight: 5,
-              }}
-            >
-              <iframe
-                // style={{ width: 400, marginTop: 100, marginRight: 50 }}
-                height="180"
-                width="300"
-                src="https://www.youtube.com/embed/DPQ7SXMHljQ"
-                frameBorder="0"
-                alt=""
-                allowFullScreen
+            <section className="text-right carousel-iframe-x">
+              <p
+                className="carousel-group-iframe-x"
                 style={{
-                  zIndex: '1000',
+                  // fontSize: '17px',
+                  float: 'right',
+                  textTransform: 'uppercase',
+                  // fontWeight:'bolder',
+                  textAlign: 'center',
+                  fontFamily: 'Exo 2',
+                  // paddingTop:'0.5rem',
+                  // color:'rgb(255, 163, 26)',
+                  paddingLeft: 5,
+                  paddingRight: 5,
                 }}
-              />
-            </p>
-          </section>
-        </div>
+              >
+                <iframe
+                  // style={{ width: 400, marginTop: 100, marginRight: 50 }}
+                  height="180"
+                  width="700"
+                  src="https://www.youtube.com/embed/DPQ7SXMHljQ"
+                  frameBorder="0"
+                  alt=""
+                  allowFullScreen
+                  style={{
+                    zIndex: '1000',
+                    width: '320px',
+                  }}
+                />
+              </p>
+            </section>
+          </div>
 
-        {/* </Swiper> */}
-      </Carousel>
+          {/* </Swiper> */}
+        </Carousel>
+      </div>
     );
   }
 }

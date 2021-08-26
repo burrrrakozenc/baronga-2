@@ -18,6 +18,7 @@ exports.createPages = ({ graphql, actions }) => {
         edges {
           node {
             handle
+            productType
           }
         }
       }
@@ -37,18 +38,21 @@ exports.createPages = ({ graphql, actions }) => {
         component: path.resolve(`./src/templates/product-page.tsx`),
         context: {
           handle: node.handle,
+          productType: node.productType,
         },
       });
     });
-    // result.data.allShopifyCollection.edges.forEach(({ node }) => {
+
+    // result.data.allShopifyProduct.edges.forEach(({ node }) => {
     //   createPage({
-    //     path: `/collection/${node.handle}/`,
-    //     component: path.resolve(`./src/templates/category-page.tsx`),
+    //     path: `/collection/${node.productType}/`,
+    //     component: path.resolve(`./src/templates/product-grid.tsx`),
     //     context: {
-    //       handle: node.handle,
+    //       productType: node.productType,
     //     },
     //   });
     // });
+
     result.data.allShopifyCollection.edges.forEach(({ node }) => {
       createPage({
         path: `modern/collection/${node.handle}/`,

@@ -65,7 +65,7 @@ export const query = graphql`
 					originalSrc
 					localFile {
 						childImageSharp {
-							fluid(maxWidth: 910, quality: 100) {
+							fluid(maxWidth: 910, quality: 70) {
 								...GatsbyImageSharpFluid_withWebp_tracedSVG
 							}
 						}

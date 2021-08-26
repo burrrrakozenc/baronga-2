@@ -42,9 +42,9 @@ const TreeMenu: React.FC<Props> = ({ items }) => {
 		};
 	}, []);
 	return (
-		<Box className="tree-menu" sx={styles.wrapper}>
+		<Box className="tree-menu" sx={styles.wrapper} style={{margin:'0 auto', justifyContent:'center', width:150}} >
 			{items.map((item) => (
-				<Fragment key={item.title}>
+				<Fragment key={item.title} sx={{margin:'0 auto', justifyContent:'center'}}>
 					{item?.submenu ? (
 						<Tree
 							isOpen={selectedItem === item.path}

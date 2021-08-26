@@ -19,7 +19,7 @@ const ProductGrid: React.FC<PropsType> = ({
 	close,
 	gridTitle,
 	products,
-	withLink = false,
+	withLink = true,
 	isCategoryProduct = false,
 }) => {
 	const getPrice = (price: any) =>

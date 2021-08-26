@@ -18,18 +18,6 @@ const styles = {
 						paddingLeft: '8px',
 						paddingRight: '10px',
 					},
-					'&.organic': {
-						'svg:not(.chevron)': {
-							width: '23px',
-							height: '23px',
-						},
-					},
-					'&.fish--meat': {
-						'svg:not(.chevron)': {
-							width: '30px',
-							height: '30px',
-						},
-					},
 				},
 			},
 		},
