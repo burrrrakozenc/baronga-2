@@ -47,6 +47,13 @@ const styles = {
 	logoArea: {
 		flex: '3',
 	},
+	menuArea: {
+		flex: '2',
+		'@media only screen and (min-width: 780px)': {
+			display: 'block',
+			marginRight: '4px',
+		},
+	},
 	hamburgBtn: {
 		display: 'none',
 		'@media only screen and (max-width: 1080px)': {
@@ -82,6 +89,40 @@ const styles = {
 			},
 		},
 	},
+	iconsMain: {
+		flex: '2',
+		display: 'flex',
+		alignItems: 'center',
+		justifyContent: 'flex-start',
+		color: 'primary',
+		a: {
+			color: 'inherit',
+			padding: ['8px 2px', '8px'],
+			
+		},
+		svg: {
+			width: '21px',
+			height: '21px',
+		},
+		button: {
+			position: 'relative',
+			svg: {
+				width: '22px',
+				height: '22px',
+			},
+		},
+		'@media only screen and (max-width: 781px)': {
+
+			display: 'block !important',
+			left:'0% !imporant',
+			// flex: '1'
+
+		},
+		'@media only screen and (max-width: 991px)': {
+			display: 'none',
+
+		},
+	},
 	badge: {
 		minWidth: '14px',
 		minHeight: '16px',
@@ -104,14 +145,14 @@ const styles = {
 		display: 'inline-flex',
 		'@media only screen and (max-width: 991px)': {
 			display: 'none',
-			
+
 		},
 	},
-	navBarBox:{
+	navBarBox: {
 		// width:300,
 		'@media only screen and (max-width: 991px)': {
 			// width:'0'
-			display:'none'
+			display: 'none'
 		},
 	}
 };

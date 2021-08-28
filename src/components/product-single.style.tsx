@@ -22,24 +22,24 @@ const styles = {
 		'@media only screen and (max-width: 768px)': {
 			width: '100%',
 		},
-		'&.has-items': {
-			width: '50%',
-			display: 'flex',
-			flexWrap: 'wrap',
-			border: `0`,
-			'@media only screen and (max-width: 1280px)': {
-				width: '60%',
-			},
-			'@media only screen and (max-width: 768px)': {
-				width: '100%',
-			},
-			'.gatsby-image-wrapper': {
-				margin: '5px',
-				width: 'calc(50% - 10px)',
-				borderRadius: '4px',
-				border: `1px solid #f0f0f0`,
-			},
-		},
+		// '&.has-items': {
+		// 	width: '50%',
+		// 	display: 'flex',
+		// 	flexWrap: 'wrap',
+		// 	border: `0`,
+		// 	'@media only screen and (max-width: 1280px)': {
+		// 		width: '60%',
+		// 	},
+		// 	'@media only screen and (max-width: 768px)': {
+		// 		width: '100%',
+		// 	},
+		// 	'.gatsby-image-wrapper': {
+		// 		margin: '5px',
+		// 		width: 'calc(50% - 10px)',
+		// 		borderRadius: '4px',
+		// 		border: `1px solid #f0f0f0`,
+		// 	},
+		// },
 	},
 	content: {
 		width: '40%',

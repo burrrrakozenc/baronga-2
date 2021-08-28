@@ -5,7 +5,7 @@ const styles = {
 		justifyContent: 'center',
 		marginBottom: 30,
 		minHeight: [130, 270],
-		height: 400,
+		height: 500,
 		borderRadius: 6,
 		position: 'relative',
 		overflow: 'hidden',

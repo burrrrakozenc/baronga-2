@@ -2,7 +2,8 @@
 import { useState } from "react";
 import { StaticQuery, graphql } from "gatsby";
 import { Box, Grid, Heading, jsx, Button } from "theme-ui";
-import ProductCard from "../product-card/product-card";
+import ProductCardWithLink from "../product-card/with-link";
+import ProductGrid from "../product-grid/product-grid";
 import Loader from "../loader/loader";
 import styles from "./all-products.style";
 
@@ -69,7 +70,12 @@ const AllProducts = () => (
 			return (
 				<Box id="allProducts" sx={styles.wrapper}>
 					<Heading as="h3">All Products</Heading>
-					<Grid sx={styles.productGrid}>
+					<ProductGrid 
+					id="feature"
+					withLink={true}
+					products={products}
+					/>
+					{/* <Grid sx={styles.productGrid}>
 						{products &&
 							products.slice(0, visible).map((product: any) => {
 								const {
@@ -82,7 +88,7 @@ const AllProducts = () => (
 									variants: [firstVariant],
 								} = product.node;
 								return (
-									<ProductCard
+									<ProductCardWithLink
 										key={id}
 										title={title}
 										shopifyId={shopifyId}
@@ -93,7 +99,7 @@ const AllProducts = () => (
 									/>
 								);
 							})}
-					</Grid>
+					</Grid> */}
 					{visible < products?.length && (
 						<Button sx={styles.loadMoreBtn} onClick={handleLoadMore}>
 							{loading ? <Loader /> : "Show more"}

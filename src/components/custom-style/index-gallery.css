@@ -1,3 +1,11 @@
+.carousel-custom {
+  max-height: 35rem;
+}
+
+.carousel-wrapper {
+  max-height: 35rem;
+}
+
 .category-cover-item {
   position: relative;
   display: inline;
@@ -40,8 +48,8 @@
 
 .carousel-iframe-x {
   position: absolute;
-  top: 33%;
-  right: 9%;
+  top: 30%;
+  right: 4%;
   width: '260px';
   height: '160px';
 }

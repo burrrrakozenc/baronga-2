@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 // import { useRef, useEffect, useDispatch,useState} from 'react'
 // import RBCarousel from 'react-bootstrap-carousel';
 // import { Row, Col } from './bootstrap-component.js';
@@ -67,12 +67,7 @@ class IndexCarousel extends React.PureComponent {
 
   render() {
     return (
-      <div
-        className="carousel-custom"
-        style={{
-          maxHeight: '50rem',
-        }}
-      >
+      <div className="carousel-custom" style={{}}>
         <Carousel
           className="carousel-wrapper"
           // dynamicHeight
@@ -81,87 +76,31 @@ class IndexCarousel extends React.PureComponent {
           // autoPlay
           infiniteLoop
         >
-          <div>
-            <img
-              // style={{
-              //   width: '100%',
-              //   height: '100%',
-              //   // objectFit: 'cover',
-              // }}
-              src={Fil}
-              alt=""
-            />
-
-            <section
-              className="text-right carousel-group-x"
-              style={{
-                position: 'absolute',
-                top: '40%',
-                right: '0%',
-                width: '390px',
-                height: '120px',
-                // borderStyle: 'solid',
-                color: 'white',
-                // backgroundColor: 'rgb(255, 184, 77)',
-                backgroundColor: 'black',
-                opacity: '0.5',
-                // borderRadius: '13px',
-                // display:'flex',
-                // right: '10px'
-              }}
-            >
-              <p
-                className="carousel-item-x"
-                style={{
-                  // fontSize: '23px',
-                  float: 'right',
-                  // fontWeight:'bolder',
-                  textAlign: 'center',
-                  fontFamily: 'Exo 2',
-                  paddingTop: '1.75rem',
-                  fontWeight: 500,
-                  // color:'rgb(255, 163, 26)',
-                  paddingLeft: 5,
-
-                  paddingRight: 45,
-                }}
-              >
-                BALİ'Lİ USTA ELLERDEN ÇIKAN EŞSİZ HEYKELLERİ KEŞFEDİN
-              </p>
-              <p
-                style={{
-                  backgroundColor: '#FF5E00',
-                  width: '370px',
-                  height: '18px',
-                  bottom: '-29%',
-                  right: '0',
-                  position: 'absolute',
-                  opacity: 0.7,
-                }}
-              />
-            </section>
-          </div>
-
-          <div>
-            <section>
+          <Link to="/collection/heykel-obje">
+            <div>
               <img
-                style={{ width: '100%', height: '100%', objectFit: 'cover' }}
-                src={Pratama}
+                // style={{
+                //   width: '100%',
+                //   height: '100%',
+                //   // objectFit: 'cover',
+                // }}
+                src={Fil}
                 alt=""
               />
-              <p
+
+              <section
                 className="text-right carousel-group-x"
                 style={{
                   position: 'absolute',
-                  top: '36%',
+                  top: '40%',
                   right: '0%',
-                  width: '360px',
-                  height: '140px',
+                  width: '390px',
+                  height: '120px',
                   // borderStyle: 'solid',
                   color: 'white',
+                  // backgroundColor: 'rgb(255, 184, 77)',
                   backgroundColor: 'black',
-                  // backgroundColor: 'rgb(0, 102, 0)',
-                  opacity: '0.4',
+                  opacity: '0.5',
                   // borderRadius: '13px',
                   // display:'flex',
                   // right: '10px'
@@ -170,92 +109,154 @@ class IndexCarousel extends React.PureComponent {
                 <p
                   className="carousel-item-x"
                   style={{
-                    // fontSize: '22px',
+                    // fontSize: '23px',
                     float: 'right',
-                    paddingTop: '1.3rem',
-                    fontWeight: '500',
+                    // fontWeight:'bolder',
                     textAlign: 'center',
                     fontFamily: 'Exo 2',
-                    // paddingTop:'0.5rem',
+                    paddingTop: '1.75rem',
+                    fontWeight: 500,
                     // color:'rgb(255, 163, 26)',
-                    opacity: 1,
                     paddingLeft: 5,
-                    paddingRight: 35,
+
+                    paddingRight: 45,
                   }}
                 >
-                  NESİLDEN NESİLE AKTARILAN KADİM EL SANATLARINI DENEYİMLEYİN
+                  BALİ'Lİ USTA ELLERDEN ÇIKAN EŞSİZ HEYKELLERİ KEŞFEDİN
+                </p>
+                <p
+                  style={{
+                    backgroundColor: '#FF5E00',
+                    width: '370px',
+                    height: '18px',
+                    bottom: '-29%',
+                    right: '0',
+                    position: 'absolute',
+                    opacity: 0.7,
+                  }}
+                />
+              </section>
+            </div>
+          </Link>
+          <Link to="/collection/taki-aksesuar">
+            <div>
+              <section>
+                <img
+                  style={{ width: '100%', height: '100%', objectFit: 'cover' }}
+                  src={Pratama}
+                  alt=""
+                />
+
+                <p
+                  className="text-right carousel-group-x"
+                  style={{
+                    position: 'absolute',
+                    top: '36%',
+                    right: '0%',
+                    width: '360px',
+                    height: '140px',
+                    // borderStyle: 'solid',
+                    color: 'white',
+                    backgroundColor: 'black',
+                    // backgroundColor: 'rgb(0, 102, 0)',
+                    opacity: '0.4',
+                    // borderRadius: '13px',
+                    // display:'flex',
+                    // right: '10px'
+                  }}
+                >
+                  <p
+                    className="carousel-item-x"
+                    style={{
+                      // fontSize: '22px',
+                      float: 'right',
+                      paddingTop: '1.3rem',
+                      fontWeight: '500',
+                      textAlign: 'center',
+                      fontFamily: 'Exo 2',
+                      // paddingTop:'0.5rem',
+                      // color:'rgb(255, 163, 26)',
+                      opacity: 1,
+                      paddingLeft: 25,
+                      paddingRight: 35,
+                    }}
+                  >
+                    NESİLDEN NESİLE AKTARILAN KADİM EL SANATLARINI DENEYİMLEYİN
+                  </p>
+                  <div
+                    style={{
+                      backgroundColor: '#FF5E00',
+                      width: '340px',
+                      height: '14px',
+                      bottom: '-9%',
+                      right: '0',
+                      position: 'absolute',
+                      opacity: 0.5,
+                    }}
+                  />
+                </p>
+              </section>
+            </div>
+          </Link>
+          <Link to="/collection/canta">
+            <div>
+              <img
+                // style={{ width: '100%', height: '100%', objectFit: 'cover' }}
+                src={TasHeykel}
+                alt="2"
+              />
+
+              <div
+                className="text-right carousel-group-x"
+                style={{
+                  position: 'absolute',
+                  top: '35%',
+                  right: '0%',
+                  width: '360px',
+                  height: '140px',
+                  // borderStyle: 'solid',
+                  color: 'white',
+                  backgroundColor: 'black',
+                  opacity: '0.6',
+                  // borderRadius: '13px',
+                  // display:'flex',
+                  // right: '10px'
+                }}
+              >
+                <p
+                  className="carousel-item-x"
+                  style={{
+                    // fontSize: '23px',
+                    float: 'right',
+                    textTransform: 'uppercase',
+                    // fontWeight:'bolder',
+                    textAlign: 'center',
+                    fontFamily: 'Exo 2, sans-serif',
+                    // paddingTop:'0.5rem',
+                    // color:'rgb(255, 163, 26)',
+
+                    paddingLeft: 5,
+                    paddingRight: 35,
+                    paddingTop: 17,
+                  }}
+                >
+                  SPİRİTÜEL&DEKORATİF ÜRÜNLERİMİZLE EVİNİZİN POZİTİF ENERJİSİN
+                  ARTIRIN
                 </p>
                 <div
                   style={{
                     backgroundColor: '#FF5E00',
                     width: '340px',
-                    height: '14px',
-                    bottom: '-9%',
+                    height: '18px',
+                    bottom: '-13%',
                     right: '0',
                     position: 'absolute',
                     opacity: 0.5,
                   }}
                 />
-              </p>
-            </section>
-          </div>
-          <div>
-            <img
-              // style={{ width: '100%', height: '100%', objectFit: 'cover' }}
-              src={TasHeykel}
-              alt="2"
-            />
-            <div
-              className="text-right carousel-group-x"
-              style={{
-                position: 'absolute',
-                top: '35%',
-                right: '0%',
-                width: '360px',
-                height: '140px',
-                // borderStyle: 'solid',
-                color: 'white',
-                backgroundColor: 'black',
-                opacity: '0.6',
-                // borderRadius: '13px',
-                // display:'flex',
-                // right: '10px'
-              }}
-            >
-              <p
-                className="carousel-item-x"
-                style={{
-                  // fontSize: '23px',
-                  float: 'right',
-                  textTransform: 'uppercase',
-                  // fontWeight:'bolder',
-                  textAlign: 'center',
-                  fontFamily: 'Exo 2, sans-serif',
-                  // paddingTop:'0.5rem',
-                  // color:'rgb(255, 163, 26)',
-
-                  paddingLeft: 5,
-                  paddingRight: 35,
-                  paddingTop: 17,
-                }}
-              >
-                SPİRİTÜEL&DEKORATİF ÜRÜNLERİMİZLE EVİNİZİN POZİTİF ENERJİSİN
-                ARTIRIN
-              </p>
-              <div
-                style={{
-                  backgroundColor: '#FF5E00',
-                  width: '340px',
-                  height: '18px',
-                  bottom: '-13%',
-                  right: '0',
-                  position: 'absolute',
-                  opacity: 0.5,
-                }}
-              />
+              </div>
             </div>
-          </div>
-
+          </Link>
           <div>
             <img
               // style={{ width: '100%', height: '100%', objectFit: 'cover' }}
@@ -285,7 +286,7 @@ class IndexCarousel extends React.PureComponent {
                   width="700"
                   src="https://www.youtube.com/embed/DPQ7SXMHljQ"
                   frameBorder="0"
-                  alt=""
+                  alt="BARONGA"
                   allowFullScreen
                   style={{
                     zIndex: '1000',

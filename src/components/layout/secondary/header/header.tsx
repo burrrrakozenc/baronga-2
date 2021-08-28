@@ -56,12 +56,16 @@ const Header = () => {
 							</Button>
 
 							<Logo path="/" />
-							<Flex>
-								<Text sx={styles.icons} style={{
+							
+						</Flex>
+						<Flex>
+						<Flex sx={styles.menuArea}>
+								<Text sx={styles.iconsMain} style={{
 									alignItems: 'center',
 									fontSize: 22,
 									fontWeight: 400,
-									paddingLeft: 30
+									paddingLeft: 20,
+									textDecoration: 'none'
 								}}>
 									<Link to="/">
 									BARONGA

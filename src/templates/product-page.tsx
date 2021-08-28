@@ -13,20 +13,19 @@ import { IoIosAdd, IoIosRemove } from 'react-icons/io';
 import SEO from '../components/seo';
 import PrimaryLayout from '../components/layout/primary/primary';
 import SocialShare from '../components/social-share/social-share';
-// import CallusBanner from '../components/call-us-banner/call-us-banner';
+
 import { CartContext } from '../provider/cart-provider';
 import { LocalCartContext } from '../provider/local-cart-provider';
 import useOnClickOutside from '../hooks/useOutsideClick';
 import styles from '../components/product-single.style';
 import ProductGrid from '../components/product-grid/product-grid';
-import HeartRater from '../components/rater/rater'
-import Modal from '../components/modals/rate-modal'
 import AskAQuestion from '../components/subscribe/ask-a-question'
 import { ModalProvider } from 'styled-react-modal'
-import { SRLWrapper, SimpleReactLightbox } from 'simple-react-lightbox'
 import ProductImage from '../components/index-gallery/gallery-item'
 import ConvertKit from '../components/subscribe/convert-kit'
 import LikeCount from '../components/subscribe/like-count'
+import '../components/custom-style/gallery-item.css'
+import '../components/custom-style/flexbin.css'
 
 
 const ProductPage: React.FC<any> = ({
@@ -149,7 +148,8 @@ const ProductPage: React.FC<any> = ({
 			style: 'currency',
 		}).format(parseFloat(price && price.amount ? price.amount : 0));
 
-		console.log(categoryProducts)
+	const totalImage: number = product.images.length;
+		 console.log(product.images.length)
 	return (
 		// <SimpleReactLightbox>
 		<PrimaryLayout
@@ -166,30 +166,21 @@ const ProductPage: React.FC<any> = ({
 						<Box
 							className={product?.images.length > 1 ? 'has-items' : ''}
 							sx={styles.image}
-						>
-							{/* <div>{product.images}</div> */}
-							{/* <SRLWrapper options={options}> */}
+							
+							> 
+							<div className={totalImage === 1 ? `flexbin-single flexbin-margin-single` : `flexbin flexbin-margin gallery-wrapper-custom` }>
+													{console.log(totalImage.length)}	
 							{product?.images.map((item: any) => (
 
 								<ProductImage imageData={item} />
-								// {console.log(item)}
-								// <Img
-								// 	key={item?.id}
-								// 	// key={i}
-								// 	fluid={item?.localFile?.childImageSharp?.fluid}
-								// 	alt={product?.title}
-								// />
 							))}
-							{/* </SRLWrapper> */}
+							</div>
+							
 						</Box>
 						<Box sx={styles.content}>
 							<Box sx={styles.header}>
 								<Heading as="h1">{product.title}</Heading>
 								<Flex>
-									{/* <HeartIcon /> */}
-									{/* <HeartRater /> */}
-									{/* <ConvertKit shopifyId={product?.handle} /> */}
-
 									<LikeCount shopifyHandle={product?.handle} />
 									{/* className={product?.images.length > 1 ? 'has-items' : ''} */}
 							
@@ -242,17 +233,6 @@ const ProductPage: React.FC<any> = ({
 									</Box>
 								</Flex>
 								<Flex>
-									{/* <HeartIcon /> */}
-									{/* <HeartRater /> */}
-									{/* <Modal />
-							&nbsp;&nbsp;|&nbsp;
-							<Link to={`/product/${product?.handle}/#ask-a-question`} sx={{
-										display: 'block'
-									}}>
-										<CommentIcon />
-								Ürün Hakkında Soru Sor
-
-								</Link> */}
 								</Flex>
 							</Box>
 
@@ -260,19 +240,6 @@ const ProductPage: React.FC<any> = ({
 							<Text style={{
 								paddingBottom: 50
 							}}><div dangerouslySetInnerHTML={{ __html: product?.descriptionHtml, }} /></Text>
-							{/* <Text as="p">{product?.description}</Text> */}
-							{/* {product?.tags && (
-							<Box sx={styles.tagArea}>
-								<Text sx={styles.tagTitle}>Tag:</Text>
-								<Box>
-									{product?.tags.map((item: string) => (
-										<Box key={item} as="span">
-											{item}
-										</Box>
-									))}
-								</Box>
-							</Box>
-						)} */}
 							<SocialShare title={product?.title} url={href} />
 						</Box>
 					</Flex>
@@ -283,19 +250,13 @@ const ProductPage: React.FC<any> = ({
 						withLink={true}
 						isCategoryProduct={true}
 					/>
-					{/* <CallusBanner
-					scrollTo="#relatedProducts"
-					callUsBanner={callUsBannerData?.call_us_banner}
-					callUsTitle={callUsBannerData?.call_us_banner_content}
-					callUsButtonText={callUsBannerData?.call_us_button_text}
-				/> */}
 					<div id="ask-a-question">
 						<AskAQuestion />
 					</div>
 				</Box>
 			</ModalProvider>
 		</PrimaryLayout>
-		// </SimpleReactLightbox>
+		
 	);
 };
 

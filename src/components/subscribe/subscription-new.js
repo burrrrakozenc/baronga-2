@@ -77,7 +77,7 @@ const SubscriptionForm = () => {
             padding: '20',
             height: '50px',
 
-            padding: 5,
+            // padding: 5,
             borderStyle: 'solid',
             borderWidth: 1,
             borderColor: 'green',

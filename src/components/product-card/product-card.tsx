@@ -54,7 +54,7 @@ const ProductCard: React.FC<PropsType> = (product) => {
 	const cartProduct = productIndex > -1 ? products[productIndex] : false;
 	const cartProductQuantity = cartProduct ? cartProduct.quantity : 0;
 	const [quantity, setQuantity] = useState(0);
-	const [available, setAvailable] = useState(productVariant.availableForSale);
+	// const [available, setAvailable] = useState(productVariant.availableForSale);
 	const checkAvailability = useCallback(
 		(productId) => {
 			client.product.fetch(productId).then((fetchedProduct) => {
@@ -62,9 +62,9 @@ const ProductCard: React.FC<PropsType> = (product) => {
 				const result = fetchedProduct.variants.filter(
 					(variant) => variant.id === productVariant.shopifyId
 				);
-				if (result && result.length > 0) {
-					setAvailable(result[0].available);
-				}
+				// if (result && result.length > 0) {
+				// 	setAvailable(result[0].available);
+				// }
 			});
 		},
 		[client.product, productVariant.shopifyId, variants]

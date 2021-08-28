@@ -105,7 +105,7 @@ const ProductCardWithLink: React.FC<PropsType> = (product) => {
 
 	const addClass = ['productCard'];
 	if (!available) {
-		addClass.push('disabled');
+		// addClass.push('disabled');
 	}
 
 	return (
