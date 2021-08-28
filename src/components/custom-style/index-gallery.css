@@ -1,9 +1,13 @@
-.carousel-custom {
+/* .carousel-custom {
   max-height: 35rem;
-}
+} */
 
-.carousel-wrapper {
+/* .carousel-wrapper {
   max-height: 35rem;
+} */
+
+.carousel img {
+  max-height: 70% !important;
 }
 
 .category-cover-item {

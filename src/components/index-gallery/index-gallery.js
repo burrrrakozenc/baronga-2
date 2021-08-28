@@ -119,7 +119,7 @@ class IndexCarousel extends React.PureComponent {
                     // color:'rgb(255, 163, 26)',
                     paddingLeft: 5,
 
-                    paddingRight: 45,
+                    paddingRight: 75,
                   }}
                 >
                   BALİ'Lİ USTA ELLERDEN ÇIKAN EŞSİZ HEYKELLERİ KEŞFEDİN
@@ -129,7 +129,7 @@ class IndexCarousel extends React.PureComponent {
                     backgroundColor: '#FF5E00',
                     width: '370px',
                     height: '18px',
-                    bottom: '-29%',
+                    bottom: '-28%',
                     right: '0',
                     position: 'absolute',
                     opacity: 0.7,
