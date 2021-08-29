@@ -4,8 +4,8 @@ import { graphql } from 'gatsby';
 // import styles from '../components/custom-style/about.module.css';
 // import get from 'lodash/get';
 import Img from 'gatsby-image';
-import { SRLWrapper, SimpleReactLightbox } from 'simple-react-lightbox';
-import JustifiedGrid from 'react-justified-grid';
+import { SRLWrapper } from 'simple-react-lightbox';
+// import JustifiedGrid from 'react-justified-grid';
 
 // import { documentToReactComponents } from '@contentful/rich-text-react-renderer';
 // import { Link } from 'gatsby'
