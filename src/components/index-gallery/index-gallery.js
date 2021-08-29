@@ -10,10 +10,10 @@ import 'react-responsive-carousel/lib/styles/carousel.min.css';
 // import { Swiper, SwiperSlide } from 'swiper/react';
 // import { Swipeable } from "react-swipeable";
 import { Carousel } from 'react-responsive-carousel';
-import Pratama from '../../images/pratama.jpg';
-import Fil from '../../images/fil.jpg';
-import TasHeykel from '../../images/tasHeykel.jpg';
-import Dancer from '../../images/finalDancer.png';
+import Pratama from '../../images/pratamaResized.jpg';
+import Fil from '../../images/filResized.jpg';
+import TasHeykel from '../../images/tasHeykelResized.jpg';
+import Dancer from '../../images/finalDancerResized.png';
 import './../custom-style/font.css';
 import './../custom-style/index-gallery.css';
 // import 'bootstrap/dist/css/bootstrap.min.css';
@@ -70,7 +70,7 @@ class IndexCarousel extends React.PureComponent {
       <div className="carousel-custom" style={{}}>
         <Carousel
           className="carousel-wrapper"
-          // dynamicHeight
+          dynamicHeight
           showStatus={false}
           showThumbs={false}
           // autoPlay

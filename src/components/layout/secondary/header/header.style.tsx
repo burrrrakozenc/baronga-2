@@ -46,6 +46,9 @@ const styles = {
 	},
 	logoArea: {
 		flex: '3',
+		'@media only screen and (min-width: 1024px)': {
+			flex:'0.2'
+		},
 	},
 	menuArea: {
 		flex: '2',
@@ -94,6 +97,7 @@ const styles = {
 		display: 'flex',
 		alignItems: 'center',
 		justifyContent: 'flex-start',
+		fontSize:'22px',
 		color: 'primary',
 		a: {
 			color: 'inherit',
@@ -111,16 +115,16 @@ const styles = {
 				height: '22px',
 			},
 		},
-		'@media only screen and (max-width: 781px)': {
+		// '@media only screen and (max-width: 781px)': {
 
-			display: 'block !important',
-			left:'0% !imporant',
-			// flex: '1'
+		// 	display: 'block !important',
+		// 	left:'0% !imporant',
+		// 	// flex: '1'
 
-		},
+		// },
 		'@media only screen and (max-width: 991px)': {
 			display: 'none',
-
+			fontSize:'18px',
 		},
 	},
 	badge: {

@@ -60,13 +60,7 @@ const Header = () => {
 						</Flex>
 						<Flex>
 						<Flex sx={styles.menuArea}>
-								<Text sx={styles.iconsMain} style={{
-									alignItems: 'center',
-									fontSize: 22,
-									fontWeight: 400,
-									paddingLeft: 20,
-									textDecoration: 'none'
-								}}>
+								<Text sx={styles.iconsMain} >
 									<Link to="/">
 									BARONGA
 									</Link>

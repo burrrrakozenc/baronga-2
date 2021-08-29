@@ -28,7 +28,7 @@ const PrimaryCard: React.FC<PropsType> = ({
 					<Box as="figcaption" sx={styles.figcaption}>
 						<Heading as="h3">{categoryTitle}</Heading>
 						<Text className="textBtn" sx={styles.textBtn}>
-							<Text as="span">{btnTex ? btnTex : "View Items"} </Text>
+							<Text as="span">{btnTex ? btnTex : "Ürünleri Görüntüle"} </Text>
 							<IoMdArrowForward />
 						</Text>
 					</Box>

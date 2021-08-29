@@ -38,7 +38,7 @@ module.exports = {
         // initialQuerySize: 250,
         includeCollections: ['shop'],
         schema: {
-          requestConcurrency: 50,
+          requestConcurrency: 10,
         },
       },
     },
