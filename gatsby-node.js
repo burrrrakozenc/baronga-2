@@ -55,7 +55,7 @@ exports.createPages = ({ graphql, actions }) => {
 
     result.data.allShopifyCollection.edges.forEach(({ node }) => {
       createPage({
-        path: `modern/collection/${node.handle}/`,
+        path: `katalog/collection/${node.handle}/`,
         component: path.resolve(`./src/templates/category-page-sidebar.tsx`),
         context: {
           handle: node.handle,

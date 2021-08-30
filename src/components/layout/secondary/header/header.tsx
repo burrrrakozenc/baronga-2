@@ -77,7 +77,7 @@ const Header = () => {
 									style={{ 
 										// paddingLeft: 15 
 									}} >
-										<Link to="/modern">
+										<Link to="/katalog">
 										Katalog
 										</Link>
 									</Text>

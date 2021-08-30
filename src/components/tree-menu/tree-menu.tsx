@@ -27,7 +27,7 @@ const TreeMenu: React.FC<Props> = ({ items }) => {
 
 	useEffect(() => {
 		const path = window.location.pathname;
-		let subMenu = path.split('/modern/collection/')[1] || '';
+		let subMenu = path.split('/katalog/collection/')[1] || '';
 		subMenu = subMenu.replace(/\/$/, '');
 		setSubMenu(subMenu);
 		let menu: any = null;
@@ -67,7 +67,7 @@ const TreeMenu: React.FC<Props> = ({ items }) => {
 										key={`${item.title}-${subItem.title}`}
 										className={subItem.path === subMenu ? 'active-menu' : ''}
 									>
-										<Link to={`/modern/collection/${subItem.path}`}>
+										<Link to={`/katalog/collection/${subItem.path}`}>
 											{subItem.title}
 										</Link>
 									</Box>

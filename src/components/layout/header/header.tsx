@@ -70,7 +70,7 @@ const Header = () => {
 						<Box sx={styles.icons}>
 							<ul sx={styles2.mainMenu}>
 								<li sx={styles2.mainMenuItemNavs}>
-									<Link to="/modern" activeClassName="active">Katalog</Link>
+									<Link to="/katalog" activeClassName="active">Katalog</Link>
 								</li>
 								{/* <li sx={styles2.mainMenuItem}>
 									<Link to="/blogs" activeClassName="active">Blog</Link>
