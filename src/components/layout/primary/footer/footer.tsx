@@ -8,6 +8,7 @@ import SocialLinks from '../../../social-links/social-links';
 import styles from './footer.styles';
 import Logo2 from '../../../../images/logo2b.png'
 import './footer.css'
+import {FaRegFileAlt} from 'react-icons/fa';
 
 const footerStaticQuery = graphql`
 	query {
@@ -65,18 +66,22 @@ const Footer: React.FC<{ fluid?: boolean }> = ({ fluid }) => (
 								</ul> */}
 							</section>
 							<section>
-								<h2>BARONGA</h2>
-								<h5>Authentic Handcrafts</h5>
+								{/* <h2>BARONGA</h2>
+								<h5>Authentic Handcrafts</h5> */}
 								<dl className="alt">
 									{/* <dt>Adres</dt>
 										<dd>1234 Somewhere Road &bull; Nashville, TN 00000 &bull; USA</dd> */}
-									<dt>&nbsp;</dt>
-									<dt>&nbsp;</dt>
 									<dt>&nbsp;</dt>
 									<dt>Telefon</dt>
 									<dd>(0) 539 953 70 21</dd>
 									<dt>Email</dt>
 									<dd><a href="#">info@baronga.com</a></dd>
+									<dt>&nbsp;</dt>
+									<dt><FaRegFileAlt/>&nbsp;Sozlesme</dt>
+									<dt>&nbsp;</dt>
+									<dt><FaRegFileAlt/>&nbsp;Sozlesme</dt>
+									<dt>&nbsp;</dt>
+									<dt><FaRegFileAlt/>&nbsp;Sozlesme</dt>
 								</dl>
 								
 							</section>

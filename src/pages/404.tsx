@@ -7,7 +7,7 @@ const NotFoundPage: React.FC<{}> = () => (
 	<PrimaryLayout>
 		<SEO title="404: Not found" />
 		<Container py="40px">
-			<h1>Page not found :(</h1>
+			<h1>Sayfayı Bulamadık :(</h1>
 		</Container>
 	</PrimaryLayout>
 );

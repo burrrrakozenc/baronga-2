@@ -78,7 +78,7 @@ const styles = {
 			backgroundColor: 'transparent',
 			'>h3': {
 				fontSize: [3, 4],
-				fontFamily: 'body',
+				fontFamily: 'Exo 2',
 				marginBottom: 30,
 			},
 		},

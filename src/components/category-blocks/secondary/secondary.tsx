@@ -34,7 +34,7 @@ const CategoryBlocks: React.FC<any> = ({
 		<Box sx={styles.wrapper}>
 			<Box sx={styles.header}>
 				<Heading as="h2">{RichText.asText(title)}</Heading>
-				<Text as="p">{RichText.asText(shortIntro)}</Text>
+				{/* <Text as="p">{RichText.asText(shortIntro)}</Text> */}
 			</Box>
 			<Carousel ssr={true} responsive={responsive} gutter="10px">
 				{categoryItems.map((item: any) => (

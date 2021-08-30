@@ -45,17 +45,29 @@ const styles = {
 		width: '100%',
 	},
 	logoArea: {
-		flex: '3',
-		'@media only screen and (min-width: 1024px)': {
-			flex:'0.2'
+		flex: '0.2',
+		'@media only screen and (min-width: 900px) and (max-width: 1025px)': {
+			flex:'0.5'
+		},
+		'@media only screen and (min-width: 701px) and (max-width: 899px)': {
+			flex:'1'
+		},
+		'@media only screen and (max-width: 700px)': {
+			flex:'3',
+			maxWidth:'150px',
 		},
 	},
 	menuArea: {
-		flex: '2',
-		'@media only screen and (min-width: 780px)': {
-			display: 'block',
-			marginRight: '4px',
+		flex: '3',
+		'@media only screen and (max-width: 700px)': {
+			flex:'0',
+			
+			// maxWidth:'350px',
 		},
+		// '@media only screen and (min-width: 780px)': {
+		// 	// display: 'block',
+		// 	marginRight: '4px',
+		// },
 	},
 	hamburgBtn: {
 		display: 'none',
@@ -123,8 +135,8 @@ const styles = {
 
 		// },
 		'@media only screen and (max-width: 991px)': {
-			display: 'none',
-			fontSize:'18px',
+			// display: 'none',
+			fontSize:'22px',
 		},
 	},
 	badge: {

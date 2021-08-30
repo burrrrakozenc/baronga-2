@@ -11,7 +11,7 @@ const styles = {
 		},
 		h4: {
 			color: 'primary',
-			fontFamily: 'body',
+			fontFamily: 'Exo 2',
 			fontSize: 1,
 			fontWeight: '700',
 			marginBottom: 10,

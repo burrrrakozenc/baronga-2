@@ -46,7 +46,7 @@ const SubscriptionForm = () => {
   };
 
   return (
-    <>
+    <div style={{ paddingBottom: '40px' }}>
       <h4 style={{ textAlign: 'center', paddingTop: '15px' }}>
         Aylik bilgilendirmeye abone olmak icin bilgileri doldurun.
       </h4>
@@ -132,7 +132,7 @@ const SubscriptionForm = () => {
           {status === 'ERROR' && <p>Oops, try again.</p>}
         </div>
       </form>
-    </>
+    </div>
   );
 };
 

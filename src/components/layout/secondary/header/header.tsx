@@ -75,7 +75,7 @@ const Header = () => {
 									<Text 
 									sx={styles.navMenuItems} 
 									style={{ 
-										paddingLeft: 15 
+										// paddingLeft: 15 
 									}} >
 										<Link to="/modern">
 										Katalog

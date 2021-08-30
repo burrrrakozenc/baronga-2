@@ -44,7 +44,7 @@ const AdBlock: React.FC<Props> = ({
 						{RichText.asText(tag)}
 					</Box>
 				)} */}
-				<Heading as="h3">{RichText.asText(title)}</Heading>
+				<Heading style={{fontFamily:'Exo 2 !important'}} as="h3">{RichText.asText(title)}</Heading>
 				{/* <Text as="p">{RichText.asText(shortDescription)}</Text> */}
 				{btn && btn}
 			</Box>

@@ -20,9 +20,9 @@ import useOnClickOutside from '../hooks/useOutsideClick';
 import styles from '../components/product-single.style';
 import ProductGrid from '../components/product-grid/product-grid';
 import AskAQuestion from '../components/subscribe/ask-a-question'
-import { ModalProvider } from 'styled-react-modal'
+// import { ModalProvider } from 'styled-react-modal'
 import ProductImage from '../components/index-gallery/gallery-item'
-import ConvertKit from '../components/subscribe/convert-kit'
+// import ConvertKit from '../components/subscribe/convert-kit'
 import LikeCount from '../components/subscribe/like-count'
 import '../components/custom-style/gallery-item.css'
 import '../components/custom-style/flexbin.css'
@@ -159,7 +159,7 @@ const ProductPage: React.FC<any> = ({
 			pathPrefix="/minimal/collection"
 			showNoticeBar={false}
 		>
-			<ModalProvider>
+			{/* <ModalProvider> */}
 				<Box sx={styles.wrapper}>
 					<SEO title={product.title} />
 					<Flex sx={styles.product}>
@@ -254,7 +254,7 @@ const ProductPage: React.FC<any> = ({
 						<AskAQuestion />
 					</div>
 				</Box>
-			</ModalProvider>
+			{/* </ModalProvider> */}
 		</PrimaryLayout>
 		
 	);
@@ -316,7 +316,7 @@ export const pageQuery = graphql`
 					originalSrc
 					localFile {
 						childImageSharp {
-							fluid(maxWidth: 910, quality: 100) {
+							fluid(maxWidth: 910, quality: 75) {
 								...GatsbyImageSharpFluid_withWebp_tracedSVG
 							}
 						}

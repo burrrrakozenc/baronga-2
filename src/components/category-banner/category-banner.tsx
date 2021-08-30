@@ -16,13 +16,21 @@ const CategoryBanner: React.FC<PropsType> = ({
 }: any) => {
 	const bgBannerImg = bgImage?.localFile?.childImageSharp?.fluid;
 	return (
+		<div>
+		<Box>
+			<Heading style={{color:'black', textAlign:'center',fontFamily:'Exo 2'}} as="h3">{title.replace(/-/g, " ")}</Heading>
+			</Box>
 		<Box as="section" sx={styles.wrapper}>
+			
+			
 			{bgBannerImg ? <Img fluid={bgBannerImg} /> : null}
 			<Box as="header" sx={styles.bannerContent}>
-				<Heading as="h1">{title.replace(/-/g, " ")}</Heading>
-				{subtitle && <Text as="p">{subtitle}</Text>}
+				
+				{/* {subtitle && <Text as="p">{subtitle}</Text>} */}
 			</Box>
+			
 		</Box>
+		</div>
 	);
 };
 

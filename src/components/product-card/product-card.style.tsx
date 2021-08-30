@@ -128,7 +128,7 @@ const styles = {
 		fontSize: 0,
 		fontWeight: '600',
 		lineHeight: 2,
-		fontFamily: 'body',
+		fontFamily: 'Exo 2',
 		marginTop: '8px',
 		overflow: 'hidden',
 		textOverflow: 'ellipsis',

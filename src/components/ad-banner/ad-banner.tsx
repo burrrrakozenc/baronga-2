@@ -44,7 +44,7 @@ const AdBanner: React.FC<Props> = ({ data, scrollTo, scrollOffset }) => {
 							// 	offset={scrollOffset}
 							// >
 							<Link to={`${item.button_title}`}>
-								<Button variant="white">
+								<Button variant="white" style={{fontFamily:'Exo 2'}}>
 									{RichText.asText(item.badge_title)} <ArrowRight />
 								</Button>
 							</Link>

@@ -95,7 +95,7 @@ class IndexCarousel extends React.PureComponent {
                   top: '40%',
                   right: '0%',
                   width: '390px',
-                  height: '120px',
+                  // height: '120px',
                   // borderStyle: 'solid',
                   color: 'white',
                   // backgroundColor: 'rgb(255, 184, 77)',
@@ -107,15 +107,15 @@ class IndexCarousel extends React.PureComponent {
                 }}
               >
                 <p
-                  className="carousel-item-x"
+                  className="carousel-item-x carousel-item-1"
                   style={{
                     // fontSize: '23px',
                     float: 'right',
                     // fontWeight:'bolder',
                     textAlign: 'center',
                     fontFamily: 'Exo 2',
-                    paddingTop: '1.75rem',
-                    fontWeight: 500,
+
+                    // fontWeight: 500,
                     // color:'rgb(255, 163, 26)',
                     paddingLeft: 5,
 
@@ -125,6 +125,7 @@ class IndexCarousel extends React.PureComponent {
                   BALİ'Lİ USTA ELLERDEN ÇIKAN EŞSİZ HEYKELLERİ KEŞFEDİN
                 </p>
                 <p
+                  className="carousel-custom-bottom"
                   style={{
                     backgroundColor: '#FF5E00',
                     width: '370px',
@@ -154,7 +155,7 @@ class IndexCarousel extends React.PureComponent {
                     top: '36%',
                     right: '0%',
                     width: '360px',
-                    height: '140px',
+                    // height: '140px',
                     // borderStyle: 'solid',
                     color: 'white',
                     backgroundColor: 'black',
@@ -166,11 +167,11 @@ class IndexCarousel extends React.PureComponent {
                   }}
                 >
                   <p
-                    className="carousel-item-x"
+                    className="carousel-item-x carousel-item-2"
                     style={{
                       // fontSize: '22px',
                       float: 'right',
-                      paddingTop: '1.3rem',
+                      // paddingTop: '1.3rem',
                       fontWeight: '500',
                       textAlign: 'center',
                       fontFamily: 'Exo 2',
@@ -184,11 +185,12 @@ class IndexCarousel extends React.PureComponent {
                     NESİLDEN NESİLE AKTARILAN KADİM EL SANATLARINI DENEYİMLEYİN
                   </p>
                   <div
+                    className="carousel-custom-bottom"
                     style={{
                       backgroundColor: '#FF5E00',
                       width: '340px',
                       height: '14px',
-                      bottom: '-9%',
+                      bottom: '-11.7%',
                       right: '0',
                       position: 'absolute',
                       opacity: 0.5,
@@ -224,7 +226,7 @@ class IndexCarousel extends React.PureComponent {
                 }}
               >
                 <p
-                  className="carousel-item-x"
+                  className="carousel-item-x carousel-item-3"
                   style={{
                     // fontSize: '23px',
                     float: 'right',
@@ -237,13 +239,14 @@ class IndexCarousel extends React.PureComponent {
 
                     paddingLeft: 5,
                     paddingRight: 35,
-                    paddingTop: 17,
+                    // paddingTop: 17,
                   }}
                 >
                   SPİRİTÜEL&DEKORATİF ÜRÜNLERİMİZLE EVİNİZİN POZİTİF ENERJİSİN
                   ARTIRIN
                 </p>
                 <div
+                  className="carousel-custom-bottom"
                   style={{
                     backgroundColor: '#FF5E00',
                     width: '340px',

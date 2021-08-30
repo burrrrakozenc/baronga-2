@@ -33,14 +33,16 @@ const indexPageStaticQuery = graphql`
 								}
 							}
 						}
-						
+						how_it_works_subtitle
+						how_it_works_title
 						trending_block_title
 						view_more_text
 						how_it_works_group {
 							title
 							description
-							image
+							
 						}
+						
 					}
 				}
 			}
@@ -73,6 +75,11 @@ const IndexPage: React.FC<{}> = () => (
 					<FeaturedProducts1 withLink={true}/>
 					<FeaturedProducts2 withLink={true}/>
 					<ConvertKit/>
+					{/* <HowItWorks
+						howItWorksTitle={howItWorksTitle}
+						howItWorksSubtitle={howItWorksSubtitle}
+						howItWorksGroup={howItWorksGroup}
+					/> */}
 				</PrimaryLayout>
 			);
 		}}
