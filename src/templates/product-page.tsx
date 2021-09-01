@@ -169,7 +169,7 @@ const ProductPage: React.FC<any> = ({
 							
 							> 
 							<div className={totalImage === 1 ? `flexbin-single flexbin-margin-single` : `flexbin flexbin-margin gallery-wrapper-custom` }>
-													{console.log(totalImage.length)}	
+														
 							{product?.images.map((item: any) => (
 
 								<ProductImage imageData={item} />

@@ -6,9 +6,10 @@ import CategoryBanner from '../components/category-banner/category-banner';
 import ProductGrid from '../components/product-grid/product-grid';
 
 const CategoryPage = ({ data, pageContext }: any) => {
-	const { image, products } = data.shopifyCollection;
-	const productsType = pageContext?.handle;
-	const title = productsType.charAt(0).toUpperCase() + productsType.slice(1);
+	const { image, products, title } = data.shopifyCollection;
+	// const productsType = pageContext?.handle;
+	// const title = data.title;
+	// const title = productsType.charAt(0).toUpperCase() + productsType.slice(1);
 
 	return (
 		<PrimaryLayout
@@ -43,6 +44,7 @@ export const query = graphql`
 					}
 				}
 			}
+			title
 			products {
 				id
 				title

@@ -27,7 +27,7 @@ class Contact extends React.Component {
               <form method="post" action="#">
                 <div class="row gtr-uniform gtr-50">
                   <div
-                    style={{ paddingBottom: 20 }}
+                    style={{ paddingBottom: 20, textDecoration: 'none' }}
                     class="col-6 col-12-xsmall"
                   >
                     <input
@@ -58,7 +58,7 @@ class Contact extends React.Component {
                   </div>
                 </div>
               </form>
-              <ul class="actions">
+              <ul class="actions" style={{ listStyle: 'none' }}>
                 <li>
                   <input
                     type="submit"

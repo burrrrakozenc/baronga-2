@@ -5,6 +5,7 @@ import styles from '../components/custom-style/about.module.css';
 import get from 'lodash/get';
 import Image from 'gatsby-image';
 import { documentToReactComponents } from '@contentful/rich-text-react-renderer';
+import Pratama from '../images/pratamaResized.jpg'
 // import { Link } from 'gatsby'
 // import Helmet from 'react-helmet'
 
@@ -23,12 +24,14 @@ class Contact extends React.Component {
                 <link rel="canonical" href="http://neferka.design/" />
             </Helmet> */}
         <div className={styles.indexWrapper}>
+        
           {about.map(({ node }) => {
             return (
               <section className={styles.page}>
                 <div>
                   {documentToReactComponents(JSON.parse(node.content.content))}
                 </div>
+                <div className={styles.container}>
                 {node.aboutImages.map((it) => {
                   return (
                     <article>
@@ -41,6 +44,7 @@ class Contact extends React.Component {
                     </article>
                   );
                 })}
+                </div>
                 <div>
                   {documentToReactComponents(
                     JSON.parse(node.content2.content2)

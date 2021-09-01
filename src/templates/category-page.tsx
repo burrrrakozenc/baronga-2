@@ -7,9 +7,9 @@ import ProductGrid from "../components/product-grid/product-grid";
 
 const CategoryPage = ({ data, pageContext }: any) => {
 	const { image, products } = data.shopifyCollection;
-	const productsType = pageContext?.handle;
-	const title = productsType.charAt(0).toUpperCase() + productsType.slice(1);
-
+	const title = data?.title;
+	// const title = productsType.charAt(0).toUpperCase() + productsType.slice(1);
+	// console.log(title)
 	return (
 		<PrimaryLayout>
 			<SEO title={title} />

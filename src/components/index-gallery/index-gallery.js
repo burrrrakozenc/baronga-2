@@ -139,7 +139,7 @@ class IndexCarousel extends React.PureComponent {
               </section>
             </div>
           </Link>
-          <Link to="/collection/taki-aksesuar">
+          <Link to="/collection/maske">
             <div>
               <section>
                 <img
@@ -200,7 +200,7 @@ class IndexCarousel extends React.PureComponent {
               </section>
             </div>
           </Link>
-          <Link to="/collection/canta">
+          <Link to="/collection/katalog">
             <div>
               <img
                 // style={{ width: '100%', height: '100%', objectFit: 'cover' }}
@@ -265,6 +265,7 @@ class IndexCarousel extends React.PureComponent {
               // style={{ width: '100%', height: '100%', objectFit: 'cover' }}
               src={Dancer}
               alt="3"
+              // className="carousel-dancer"
             />
 
             <section className="text-right carousel-iframe-x">
@@ -291,10 +292,13 @@ class IndexCarousel extends React.PureComponent {
                   frameBorder="0"
                   alt="BARONGA"
                   allowFullScreen
-                  style={{
-                    zIndex: '1000',
-                    width: '320px',
-                  }}
+                  className="carousel-iframe-item"
+                  style={
+                    {
+                      // zIndex: '1000',
+                      // width: '320px',
+                    }
+                  }
                 />
               </p>
             </section>

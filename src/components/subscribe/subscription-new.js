@@ -48,7 +48,7 @@ const SubscriptionForm = () => {
   return (
     <div style={{ paddingBottom: '40px' }}>
       <h4 style={{ textAlign: 'center', paddingTop: '15px' }}>
-        Aylik bilgilendirmeye abone olmak icin bilgileri doldurun.
+        Yeni gelen ürünler, indirim ve fırsatlardan haberdar olmak için üye olun
       </h4>
       <form
         action={YOUR_FORM_URL}

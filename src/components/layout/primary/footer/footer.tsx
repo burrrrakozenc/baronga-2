@@ -8,7 +8,8 @@ import SocialLinks from '../../../social-links/social-links';
 import styles from './footer.styles';
 import Logo2 from '../../../../images/logo2b.png'
 import './footer.css'
-import {FaRegFileAlt} from 'react-icons/fa';
+
+import { FaRegFileAlt, FaYoutubeSquare, FaInstagramSquare, FaFacebookSquare, FaPinterestSquare } from 'react-icons/fa';
 
 const footerStaticQuery = graphql`
 	query {
@@ -72,20 +73,35 @@ const Footer: React.FC<{ fluid?: boolean }> = ({ fluid }) => (
 									{/* <dt>Adres</dt>
 										<dd>1234 Somewhere Road &bull; Nashville, TN 00000 &bull; USA</dd> */}
 									<dt>&nbsp;</dt>
+									<dt>&nbsp;</dt>
+									<dt>&nbsp;</dt>
 									<dt>Telefon</dt>
 									<dd>(0) 539 953 70 21</dd>
 									<dt>Email</dt>
 									<dd><a href="#">info@baronga.com</a></dd>
 									<dt>&nbsp;</dt>
-									<dt><FaRegFileAlt/>&nbsp;Sozlesme</dt>
 									<dt>&nbsp;</dt>
-									<dt><FaRegFileAlt/>&nbsp;Sozlesme</dt>
 									<dt>&nbsp;</dt>
-									<dt><FaRegFileAlt/>&nbsp;Sozlesme</dt>
 								</dl>
 								
 							</section>
-							<SocialLinks items={socialData} />
+							
+							<Box style={{width: '100%', margin:'0 auto', justifyContent:'center'}}>
+							{/* <SocialLinks items={socialData} /> */}
+							<Box style={{paddingBottom:20}}>
+							<FaPinterestSquare style={{color:'red', fontSize:'35px',paddingLeft:'10px'}}/>&nbsp;&nbsp;&nbsp;&nbsp;
+								<FaFacebookSquare style={{color:'blue', fontSize:'35px',paddingLeft:'10px'}}/>&nbsp;&nbsp;&nbsp;&nbsp;
+								<FaInstagramSquare style={{color:'black', fontSize:'30px'}}/>&nbsp;&nbsp;&nbsp;&nbsp;
+								<FaYoutubeSquare style={{color:'red', fontSize:'30px'}}/>
+								</Box>
+								<Box>
+									<FaRegFileAlt/>&nbsp;Baronga  İptal ve İade Koşulları
+									&nbsp;&nbsp;&nbsp;&nbsp;
+									<FaRegFileAlt/>&nbsp;Baronga Kullanıcı Sözleşmesi
+									&nbsp;&nbsp;&nbsp;&nbsp;
+									<FaRegFileAlt/>&nbsp;Baronga Gizlilik Bildirimi
+									</Box>
+									</Box>
 						</footer>
 						{/* <Text className="copyright" sx={styles.copyright}>
 							{RichText.render(footerData.copyright_text)}
