@@ -87,7 +87,7 @@ const Header = () => {
 										paddingLeft: 15 
 									}} >
 										<Link to="/about" >
-										Hakkimizda
+										Hikayemiz
 										</Link>
 										
 									</Text>
@@ -98,7 +98,7 @@ const Header = () => {
 										paddingRight:35 
 										}} >
 											<Link to="/contact">
-											Bize Ulasin
+											Bize Ulaşın
 											</Link>
 									</Text>
 								{/* </Flex>
@@ -113,7 +113,7 @@ const Header = () => {
 							</Button> */}
 							<Button
 								variant="text"
-								ariaLabel="Cart"
+								ariaLabel="Sepetindekiler"
 								onClick={() => setCartVisible(true)}
 							>
 								<FaShoppingCart />

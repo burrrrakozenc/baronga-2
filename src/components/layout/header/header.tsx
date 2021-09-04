@@ -84,7 +84,7 @@ const Header = () => {
 							</ul>
 							<Button
 								variant="text"
-								ariaLabel="Cart"
+								ariaLabel="Sepetindekiler"
 								onClick={() => setCartVisible(true)}
 							>
 								<AiOutlineShoppingCart />

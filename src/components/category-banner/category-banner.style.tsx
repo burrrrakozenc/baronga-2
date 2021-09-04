@@ -6,6 +6,7 @@ const styles = {
 		marginBottom: 30,
 		minHeight: [130, 270],
 		height: 500,
+		width: '100%',
 		borderRadius: 6,
 		position: 'relative',
 		overflow: 'hidden',

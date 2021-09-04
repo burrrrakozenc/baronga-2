@@ -124,7 +124,7 @@ const Sidebar: React.FC<{ onClose?: () => void }> = ({ onClose }) => (
 						</Link>
 						<Link to="/contact">
 								<Text as="p" sx={styles.text}>
-									Bize Ulasin
+									Bize Ulaşın
 						</Text>
 						</Link>
 							</Box>

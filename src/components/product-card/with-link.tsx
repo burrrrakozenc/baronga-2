@@ -124,7 +124,7 @@ const ProductCardWithLink: React.FC<PropsType> = (product) => {
 						variant="badge"
 						sx={styles.cartBtn}
 						className={quantity > 0 ? 'active' : ''}
-						title="Add to Cart"
+						title="Sepete Ekle"
 						onClick={() => handleAddToCart()}
 					>
 						{quantity > 0 ? (

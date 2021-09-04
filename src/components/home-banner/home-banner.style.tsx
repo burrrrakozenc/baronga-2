@@ -28,15 +28,19 @@ const styles = {
 		},
 	},
 	bannerContent: {
+		marginLeft:'-7.3%',
 		color: 'white',
 		position: 'relative',
 		zIndex: 1,
-		h1: {
-			p: {
-				fontSize: [3, 4],
-				lineHeight: [1.6, 'initial'],
-				marginBottom: [15, 25, 30],
-			},
+		
+		p: {
+			// fontSize:'30px'
+			// p: {
+			// 	// fontSize: [3, 4],
+				
+			// 	lineHeight: [1.6, 'initial'],
+			// 	marginBottom: [15, 25, 30],
+			// },
 		},
 		button: {
 			marginTop: [30, 40, 60],
@@ -46,6 +50,32 @@ const styles = {
 			},
 		},
 	},
+	opacBackgroud: {
+		paddingTop:'23px',
+		maxWidth: '345px',
+		height: '130px',
+		backgroundColor:'orange',
+		paddingLeft:'0!important',
+		opacity:'0.6',
+		h2: {
+			textAlign:'center',
+			opacity: '100%',
+			color: 'white',
+			fontSize:'24px' ,
+			textTransform:'capitalize',
+			fontFamily:'Exo 2!important',
+			marginLeft:'10%',
+			// fontSize: ['26px', '28px'],
+			lineHeight: '1.607',
+			fontWeight: '400',
+			// fontFamily: 'Open Sans, sans-serif',
+			marginBottom: '8px',
+		},
+		// left: '-20!important',
+	},
+	mainHeader: {
+		fontSize:'30px! important'
+	}
 };
 
 export default styles;

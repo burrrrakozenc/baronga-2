@@ -39,7 +39,7 @@ const LineItem = (props: any) => {
 						<Box>
 							<Text sx={styles.title}>{item.title}</Text>
 							<Text sx={styles.unitPrice}>
-								Unit Price {getPrice(item.price)}
+								Adet Fiyatı {getPrice(item.price)}
 							</Text>
 						</Box>
 						<Box sx={styles.counterWrapper}>

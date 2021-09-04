@@ -51,7 +51,7 @@ const FeaturedProductsHome: React.FC<{ withLink?: boolean }> = ({
 				<ProductGrid
 					id="feature"
 					withLink={withLink}
-					gridTitle="Ozel Urunler"
+					gridTitle="Özel Ürünler"
 					products={products}
 				/>
 			);

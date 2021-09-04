@@ -30,7 +30,7 @@ const Cart: React.FunctionComponent<{ onClick?: () => void }> = ({
 	return (
 		<Box sx={styles.wrapper}>
 			<Heading as="h2" sx={styles.title}>
-				Cart
+				Sepetindekiler
 				<Button title="Close" variant="text" onClick={onClick}>
 					<IoIosClose />
 				</Button>
@@ -64,7 +64,7 @@ const Cart: React.FunctionComponent<{ onClick?: () => void }> = ({
 					<Button onClick={handleCheckout} style={{
 						backgroundColor:'rgb(214,86,34)'
 					}}>
-						{updating ? 'Yukleniyor ...' : 'Alisverise Devam Et '}
+						{updating ? 'Yükleniyor ...' : 'Alışverişe Devam Et '}
 					</Button>
 				)}
 			</Box>

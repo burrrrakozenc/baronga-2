@@ -17,7 +17,8 @@ const CategoryBanner: React.FC<PropsType> = ({
 	subtitle,
 	bgImage,
 }: any) => {
-	const bgBannerImg = bgImage?.localFile?.childImageSharp?.fluid;
+	// const bgBannerImg = bgImage?.localFile?.childImageSharp?.fluid;
+	const bgBannerImg = bgImage?.src;
 	const categoryName = title;
 	// if(categoryName === "Heykel-Obje") {
 	// 	categoryName.replace(/Heykel-Obje/, "Heykel/Obje")
@@ -32,7 +33,7 @@ const CategoryBanner: React.FC<PropsType> = ({
 		<Box as="section" sx={styles.wrapper}>
 			
 			
-			{bgBannerImg ? <Img fluid={bgBannerImg} /> : null}
+			{bgBannerImg ? <img src={bgBannerImg} /> : null}
 			<Box as="header" sx={styles.bannerContent}>
 				
 				{/* {subtitle && <Text as="p">{subtitle}</Text>} */}

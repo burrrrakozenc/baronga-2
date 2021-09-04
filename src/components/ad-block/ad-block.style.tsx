@@ -1,5 +1,6 @@
 const styles = {
 	wrapper: {
+		
 		backgroundRepeat: 'no-repeat',
 		backgroundSize: 'cover',
 		backgroundPosition: 'center',
@@ -15,11 +16,24 @@ const styles = {
 		},
 	},
 	content: {
-		maxWidth: '245px',
+		paddingTop:'50px',
+		maxWidth: '200px',
+		height: '150px',
 		width: '100%',
+		marginLeft:'-7.3%',
+		// paddingLeft:'100px',
+		// marginLeft:'0',
+		opacity: '100%',
+		justifyContent: 'center',
+		
 		h3: {
-			color: 'primary',
-			fontSize: ['22px', '28px'],
+			opacity: '100%',
+			color: 'white',
+			fontSize:'18px ' ,
+			textTransform:'capitalize',
+			fontFamily:'Exo 2!important',
+			marginLeft:'10%',
+			// fontSize: ['22px', '28px'],
 			lineHeight: '1.607',
 			fontWeight: '600',
 			// fontFamily: 'Open Sans, sans-serif',
@@ -62,6 +76,15 @@ const styles = {
 		padding: '5px 10px',
 		marginBottom: '8px',
 	},
+	opacBackgroud: {
+		paddingTop:'23px',
+		maxWidth: '255px',
+		height: '130px',
+		backgroundColor:'orange',
+		paddingLeft:'0!important',
+		opacity:'0.6',
+		left: '-10!important',
+	}
 };
 
 export default styles;

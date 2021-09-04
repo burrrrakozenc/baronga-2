@@ -33,7 +33,7 @@ const HomeBanner: React.FC<Props> = ({
 			setOffset(60);
 		}
 	}, [windowSize]);
-
+	const mainTitle = RichText.render(bannerTitle)
 	return (
 		<Box
 			as="section"
@@ -44,7 +44,9 @@ const HomeBanner: React.FC<Props> = ({
 			className="home-banner"
 		>
 			<Box as="header" sx={styles.bannerContent}>
-				{bannerTitle && <h1>{RichText.render(bannerTitle)}</h1>}
+				<Box sx={styles.opacBackgroud}>
+				<h2 sx={styles.opacBackgroud.h2}>Geleneksel Bali Kanvas Tabloları'nı Keşfedin</h2>
+				</Box>
 				{/* {bannerSubTitle && RichText.render(bannerSubTitle)}
 				{showActionBtn && (
 					<AnchorLink
