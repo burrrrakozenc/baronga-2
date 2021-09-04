@@ -5,7 +5,8 @@ import styles from '../components/custom-style/about.module.css';
 import get from 'lodash/get';
 import Image from 'gatsby-image';
 import { documentToReactComponents } from '@contentful/rich-text-react-renderer';
-import Pratama from '../images/pratamaResized.jpg'
+import Pratama from '../images/pratamaAbout.jpg'
+import CategoryBanner from '../components/category-banner/category-banner';
 // import { Link } from 'gatsby'
 // import Helmet from 'react-helmet'
 
@@ -24,7 +25,10 @@ class Contact extends React.Component {
                 <link rel="canonical" href="http://neferka.design/" />
             </Helmet> */}
         <div className={styles.indexWrapper}>
-        
+          {/* <div style={{maxHeight:'300px'}}> */}
+
+        <CategoryBanner bgImage={Pratama} />
+          {/* </div> */}
           {about.map(({ node }) => {
             return (
               <section className={styles.page}>

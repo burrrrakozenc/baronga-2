@@ -4,7 +4,7 @@ import ProductGrid from '../product-grid/product-grid';
 
 const featuredStaticQuery = graphql`
 	query {
-		allShopifyProduct(filter: { tags: { eq: "featured111" } }, limit: 11) {
+		allShopifyProduct(filter: { tags: { eq: "featured111" } }, limit: 10) {
 			edges {
 				node {
 					id

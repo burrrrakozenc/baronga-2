@@ -20,8 +20,8 @@ class Contact extends React.Component {
                 <link rel="canonical" href="http://neferka.design/" />
             </Helmet> */}
         <div className={styles.indexWrapper}>
-          <h2>Bizimle iletisime gecin</h2>
-          <p>Toplu alim vs bir takim aciklamalar.</p>
+          <h2>Bizimle iletişime geçin.</h2>
+          <p>Toplu alım, istek ve şikayetleriniz için bize ulaşın.</p>
           <div class="row">
             <div class="col-12">
               <form method="post" action="#">
