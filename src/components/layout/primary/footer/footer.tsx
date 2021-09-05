@@ -1,5 +1,5 @@
 /** @jsx jsx */
-import { StaticQuery, graphql } from 'gatsby';
+import { StaticQuery, graphql, Link } from 'gatsby';
 import get from 'lodash/get';
 // import { RichText } from 'prismic-reactjs';
 import { Box, Text, jsx } from 'theme-ui';
@@ -83,25 +83,25 @@ const Footer: React.FC<{ fluid?: boolean }> = ({ fluid }) => (
 									<dt>&nbsp;</dt>
 									<dt>&nbsp;</dt>
 								</dl>
-								
+
 							</section>
-							
-							<Box style={{width: '100%', margin:'0 auto', justifyContent:'center'}}>
-							{/* <SocialLinks items={socialData} /> */}
-							<Box style={{paddingBottom:20}}>
-							<FaPinterestSquare style={{color:'red', fontSize:'35px',paddingLeft:'10px'}}/>&nbsp;&nbsp;&nbsp;&nbsp;
-								<FaFacebookSquare style={{color:'blue', fontSize:'35px',paddingLeft:'10px'}}/>&nbsp;&nbsp;&nbsp;&nbsp;
-								<FaInstagramSquare style={{color:'black', fontSize:'30px'}}/>&nbsp;&nbsp;&nbsp;&nbsp;
-								<FaYoutubeSquare style={{color:'red', fontSize:'30px'}}/>
+
+							<Box style={{ width: '100%', margin: '0 auto', justifyContent: 'center' }}>
+								{/* <SocialLinks items={socialData} /> */}
+								<Box style={{ paddingBottom: 20 }}>
+								<a href="https://tr.pinterest.com/barongabaronga/"> <FaPinterestSquare style={{ color: 'red', fontSize: '35px', paddingLeft: '10px' }} /></a>&nbsp;&nbsp;&nbsp;&nbsp;
+								<a href="https://www.facebook.com/barongahandcrafts/"><FaFacebookSquare style={{ color: 'blue', fontSize: '35px', paddingLeft: '10px' }} /></a>&nbsp;&nbsp;&nbsp;&nbsp;
+								<a href="https://www.instagram.com/baronga_handcrafts/"><FaInstagramSquare style={{ color: 'black', fontSize: '30px' }} /></a>&nbsp;&nbsp;&nbsp;&nbsp;
+								<a href="https://www.youtube.com/channel/UCkHFNyFvD5SjsTbS9UeZy7g"><FaYoutubeSquare style={{ color: 'red', fontSize: '30px' }} /></a>
 								</Box>
 								<Box>
-									<FaRegFileAlt/>&nbsp;Baronga  İptal ve İade Koşulları
+									<FaRegFileAlt />&nbsp;Baronga  İptal ve İade Koşulları
 									&nbsp;&nbsp;&nbsp;&nbsp;
-									<FaRegFileAlt/>&nbsp;Baronga Kullanıcı Sözleşmesi
+									<FaRegFileAlt />&nbsp;Baronga Kullanıcı Sözleşmesi
 									&nbsp;&nbsp;&nbsp;&nbsp;
-									<FaRegFileAlt/>&nbsp;Baronga Gizlilik Bildirimi
+									<FaRegFileAlt />&nbsp;Baronga Gizlilik Bildirimi
 									</Box>
-									</Box>
+							</Box>
 						</footer>
 						{/* <Text className="copyright" sx={styles.copyright}>
 							{RichText.render(footerData.copyright_text)}

@@ -19,7 +19,7 @@ const CategoryBanner: React.FC<PropsType> = ({
 }: any) => {
 	// const bgBannerImg = bgImage?.localFile?.childImageSharp?.fluid;
 	const bgBannerImg = bgImage?.src ?? bgImage;
-	const categoryName = title;
+	const categoryName = title ? title?.replace(/-/g, "/") : ""
 	// if(categoryName === "Heykel-Obje") {
 	// 	categoryName.replace(/Heykel-Obje/, "Heykel/Obje")
 	// }

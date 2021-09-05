@@ -1,5 +1,5 @@
 import React from "react";
-import { StaticQuery, graphql } from "gatsby";
+import { StaticQuery, graphql, Link } from "gatsby";
 import get from "lodash/get";
 import SEO from "../components/seo";
 import SecondaryLayout from "../components/layout/secondary/secondary";
@@ -47,12 +47,14 @@ const ModernHome: React.FC<{}> = () => (
 			return (
 				<SecondaryLayout>
 					<SEO title="Home" />
+					<Link to="/katalog/collection/kanvas-tablo">
 					<HomeBanner
 						bannerTitle={homeBanner?.banner_title}
 						bannerSubTitle={homeBanner?.banner_subtitle}
 						banner={homeBanner?.banner_image?.url}
 						showActionBtn={false}
 					/>
+					</Link>
 					<AdBanner data={adBlocks} scrollTo="#allProducts" scrollOffset={70} />
 					<AllProducts />
 				</SecondaryLayout>

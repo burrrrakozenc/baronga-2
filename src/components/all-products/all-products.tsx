@@ -69,7 +69,7 @@ const AllProducts = () => (
 				}).format(parseFloat(price && price.amount ? price.amount : 0));
 			return (
 				<Box id="allProducts" sx={styles.wrapper}>
-					<Heading as="h3">All Products</Heading>
+					<Heading as="h3">Tüm Ürünler</Heading>
 					<ProductGrid 
 					id="feature"
 					withLink={true}

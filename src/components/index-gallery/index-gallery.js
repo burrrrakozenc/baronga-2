@@ -200,7 +200,7 @@ class IndexCarousel extends React.PureComponent {
               </section>
             </div>
           </Link>
-          <Link to="/collection/katalog">
+          <Link to="/katalog">
             <div>
               <img
                 // style={{ width: '100%', height: '100%', objectFit: 'cover' }}
