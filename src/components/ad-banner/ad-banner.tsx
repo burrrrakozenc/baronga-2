@@ -30,7 +30,10 @@ const AdBanner: React.FC<Props> = ({ data, scrollTo, scrollOffset }) => {
 		<Box className="picksyAdBanner" sx={styles.wrapper}>
 			<Carousel ssr={true} responsive={responsive} gutter="10px">
 				{data.map((item: any, index: number) => (
+					
+					<Link to={`${RichText.asText(item?.short_description)}`}>
 					<AdBlock
+						style={{textDecoration:'none'}}
 						key={`adblock-key${index}`}
 						tag={item.badge_title}
 						tagBgColor={item.badge_color}
@@ -51,6 +54,7 @@ const AdBanner: React.FC<Props> = ({ data, scrollTo, scrollOffset }) => {
 							// </AnchorLink>
 						}
 					/>
+					</Link>
 				))}
 			</Carousel>
 		</Box>

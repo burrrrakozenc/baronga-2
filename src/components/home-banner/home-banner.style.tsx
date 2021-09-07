@@ -27,17 +27,24 @@ const styles = {
 			zIndex: 0,
 		},
 	},
+	anchorLink: {
+		textDecoration: 'none!important',
+		':hover': {
+			textDecoration: 'none!important',
+		},
+	},
 	bannerContent: {
-		marginLeft:'-7.3%',
+		marginLeft: '-7.3%',
 		color: 'white',
 		position: 'relative',
 		zIndex: 1,
-		
+		textDecoration: 'none',
 		p: {
+			textDecoration: 'none',
 			// fontSize:'30px'
 			// p: {
 			// 	// fontSize: [3, 4],
-				
+
 			// 	lineHeight: [1.6, 'initial'],
 			// 	marginBottom: [15, 25, 30],
 			// },
@@ -51,20 +58,22 @@ const styles = {
 		},
 	},
 	opacBackgroud: {
-		paddingTop:'23px',
+		paddingTop: '23px',
 		maxWidth: '345px',
 		height: '130px',
-		backgroundColor:'orange',
-		paddingLeft:'0!important',
-		opacity:'0.6',
+		backgroundColor: 'orange',
+		paddingLeft: '0!important',
+		opacity: '0.6',
+		textDecoration: 'none',
 		h2: {
-			textAlign:'center',
+			textAlign: 'center',
 			opacity: '100%',
 			color: 'white',
-			fontSize:'24px' ,
-			textTransform:'capitalize',
-			fontFamily:'Exo 2!important',
-			marginLeft:'10%',
+			textDecoration: 'none',
+			fontSize: '24px',
+			textTransform: 'capitalize',
+			fontFamily: 'Exo 2!important',
+			marginLeft: '10%',
 			// fontSize: ['26px', '28px'],
 			lineHeight: '1.607',
 			fontWeight: '400',
@@ -74,7 +83,7 @@ const styles = {
 		// left: '-20!important',
 	},
 	mainHeader: {
-		fontSize:'30px! important'
+		fontSize: '30px! important'
 	}
 };
 

@@ -16,17 +16,21 @@ const styles = {
 		},
 	},
 	content: {
-		paddingTop:'50px',
+		// paddingTop:'50px',
+		// bottom:'-10%',
 		maxWidth: '200px',
 		height: '150px',
 		width: '100%',
-		marginLeft:'-7.3%',
+		marginLeft:'-7.5%',
+		marginBottom:'-45%',
 		// paddingLeft:'100px',
 		// marginLeft:'0',
 		opacity: '100%',
 		justifyContent: 'center',
 		
 		h3: {
+			paddingTop:'1rem',
+			// justifyContent:'center',
 			opacity: '100%',
 			color: 'white',
 			fontSize:'18px ' ,
@@ -37,7 +41,7 @@ const styles = {
 			lineHeight: '1.607',
 			fontWeight: '600',
 			// fontFamily: 'Open Sans, sans-serif',
-			marginBottom: '8px',
+			// marginBottom: '8px',
 		},
 		p: {
 			color: 'primary',
@@ -45,7 +49,11 @@ const styles = {
 			lineHeight: '1.785',
 		},
 		a: {
+			textDecoration:'none',
 			display: 'inline-block',
+			'&:hover':{
+				textDecoration:'none',
+			}
 		},
 		button: {
 			minWidth: '130px',
@@ -77,12 +85,13 @@ const styles = {
 		marginBottom: '8px',
 	},
 	opacBackgroud: {
-		paddingTop:'23px',
+		// paddingTop:'23px',
 		maxWidth: '255px',
 		height: '130px',
 		backgroundColor:'orange',
 		paddingLeft:'0!important',
 		opacity:'0.6',
+		top:'40%!important',
 		left: '-10!important',
 	}
 };

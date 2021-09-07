@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 // import { useRef, useEffect, useDispatch,useState} from 'react'
 // import RBCarousel from 'react-bootstrap-carousel';
 // import { Row, Col } from './bootstrap-component.js';
@@ -16,6 +16,7 @@ import TasHeykel from '../../images/tasHeykelResized.jpg';
 import Dancer from '../../images/finalDancerResized.png';
 import './../custom-style/font.css';
 import './../custom-style/index-gallery.css';
+// import useWindowSize from '../../../../../hooks/useWindowSize';
 // import 'bootstrap/dist/css/bootstrap.min.css';
 // import Swipe from 'react-easy-swipe'
 // import ReactSwipe from "react-swipe";
@@ -66,6 +67,13 @@ class IndexCarousel extends React.PureComponent {
   };
 
   render() {
+    //   const [sidebarVisibile, setSidebarVisible] = useState(false);
+    //   const windowSize = useWindowSize();
+    // useEffect(() => {
+    // 	if (windowSize && windowSize > 700) {
+    // 		setSidebarVisible(false);
+    // 	}
+    // }, [windowSize]);
     return (
       <div className="carousel-custom" style={{}}>
         <Carousel
@@ -73,7 +81,7 @@ class IndexCarousel extends React.PureComponent {
           dynamicHeight
           showStatus={false}
           showThumbs={false}
-          // autoPlay
+          autoPlay={false}
           infiniteLoop
         >
           <Link to="/collection/heykel-obje">
@@ -267,7 +275,7 @@ class IndexCarousel extends React.PureComponent {
               alt="3"
               // className="carousel-dancer"
             />
-
+            {}
             <section className="text-right carousel-iframe-x">
               <p
                 className="carousel-group-iframe-x"

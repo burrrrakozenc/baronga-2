@@ -1,6 +1,7 @@
 /** @jsx jsx */
 import { useState, useEffect } from 'react';
 import { RichText } from 'prismic-reactjs';
+import Link from 'gatsby'
 import { Box, Text, Button, jsx } from 'theme-ui';
 import AnchorLink from 'react-anchor-link-smooth-scroll';
 import { ArrowRight } from '../icons';
@@ -43,11 +44,12 @@ const HomeBanner: React.FC<Props> = ({
 			}}
 			className="home-banner"
 		>
-			<Box as="header" sx={styles.bannerContent}>
-				<Box sx={styles.opacBackgroud}>
-				<h2 sx={styles.opacBackgroud.h2}>Geleneksel Bali Kanvas Tabloları'nı Keşfedin</h2>
-				</Box>
-				{/* {bannerSubTitle && RichText.render(bannerSubTitle)}
+			<AnchorLink to="/" sx={styles.anchorLink}>
+				<Box as="header" sx={styles.bannerContent}>
+					<Box sx={styles.opacBackgroud}>
+						<h2 sx={styles.opacBackgroud.h2}>Geleneksel Bali Kanvas Tabloları'nı Keşfedin</h2>
+					</Box>
+					{/* {bannerSubTitle && RichText.render(bannerSubTitle)}
 				{showActionBtn && (
 					<AnchorLink
 						href="#feature"
@@ -64,7 +66,8 @@ const HomeBanner: React.FC<Props> = ({
 						</Button>
 					</AnchorLink>
 				)} */}
-			</Box>
+				</Box>
+			</AnchorLink>
 		</Box>
 	);
 };

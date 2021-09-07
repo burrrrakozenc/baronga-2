@@ -7,6 +7,7 @@ import LocalCartProvider from '../../provider/local-cart-provider';
 import SearchProvider from '../../provider/search-provider';
 import theme from '../../gatsby-plugin-theme-ui';
 import styles from './layout.style';
+import '../custom-style/layout.css'
 
 const Layout: React.FunctionComponent = ({ children }) => {
 	return (
