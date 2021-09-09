@@ -236,18 +236,12 @@ class IndexCarousel extends React.PureComponent {
                 <p
                   className="carousel-item-x carousel-item-3"
                   style={{
-                    // fontSize: '23px',
                     float: 'right',
                     textTransform: 'uppercase',
-                    // fontWeight:'bolder',
                     textAlign: 'center',
                     fontFamily: 'Exo 2, sans-serif',
-                    // paddingTop:'0.5rem',
-                    // color:'rgb(255, 163, 26)',
-
                     paddingLeft: 5,
                     paddingRight: 35,
-                    // paddingTop: 17,
                   }}
                 >
                   SPİRİTÜEL&DEKORATİF ÜRÜNLERİMİZLE EVİNİZİN POZİTİF ENERJİSİN
@@ -269,25 +263,16 @@ class IndexCarousel extends React.PureComponent {
             </div>
           </Link>
           <div>
-            <img
-              // style={{ width: '100%', height: '100%', objectFit: 'cover' }}
-              src={Dancer}
-              alt="3"
-              // className="carousel-dancer"
-            />
+            <img src={Dancer} alt="3" />
             {}
             <section className="text-right carousel-iframe-x">
               <p
                 className="carousel-group-iframe-x"
                 style={{
-                  // fontSize: '17px',
                   float: 'right',
                   textTransform: 'uppercase',
-                  // fontWeight:'bolder',
                   textAlign: 'center',
                   fontFamily: 'Exo 2',
-                  // paddingTop:'0.5rem',
-                  // color:'rgb(255, 163, 26)',
                   paddingLeft: 5,
                   paddingRight: 5,
                 }}
@@ -301,12 +286,6 @@ class IndexCarousel extends React.PureComponent {
                   alt="BARONGA"
                   allowFullScreen
                   className="carousel-iframe-item"
-                  style={
-                    {
-                      // zIndex: '1000',
-                      // width: '320px',
-                    }
-                  }
                 />
               </p>
             </section>

@@ -96,7 +96,9 @@
   }
   .carousel-iframe-x {
     top: 0% !important;
-    right: -12% !important;
+    right: 0% !important;
+    max-width: 100% !important;
+    height: 100% !important;
   }
   .carousel-iframe-item {
     /* width: 100%; */
