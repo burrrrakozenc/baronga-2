@@ -1,5 +1,13 @@
 require('ts-node').register({ files: true });
 const path = require(`path`);
+var fs = require('fs');
+var dir = './.cache/caches/gatsby-source-prismic-graphql';
+
+exports.onPreBootstrap = () => {
+  if (!fs.existsSync(dir)) {
+    fs.mkdirSync(dir);
+  }
+};
 
 /** @type { import("gatsby").GatsbyNode["createPages"] } */
 exports.createPages = ({ graphql, actions }) => {
