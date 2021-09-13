@@ -32,7 +32,7 @@ module.exports = {
       options: {
         shopName: process.env.GATSBY_SHOP_NAME, // Load from env
         accessToken: process.env.GATSBY_SHOPIFY_ACCESS_TOKEN, // Load from env
-        downloadImages: true,
+        // downloadImages: true,
         verbose: true,
         paginationSize: 25,
         // initialQuerySize: 250,
@@ -73,7 +73,7 @@ module.exports = {
       options: {
         useMozJpeg: false,
         stripMetadata: true,
-        defaultQuality: '75',
+        defaultQuality: '78',
       },
     },
     {
