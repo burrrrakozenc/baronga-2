@@ -4,8 +4,8 @@ const styles = {
 		alignItems: 'center',
 		justifyContent: 'center',
 		marginBottom: 30,
-		minHeight: [130, 270],
-		height: 500,
+		minHeight: [200, 270],
+		height: 600,
 		width: '100%',
 		borderRadius: 6,
 		position: 'relative',
@@ -35,12 +35,18 @@ const styles = {
 	bannerContent: {
 		color: 'white',
 		position: 'relative',
+		
 		zIndex: 1,
 		h1: {
+			// fontFamily:'Exo 2!important',
 			fontSize: ['17px', 4],
-			fontWeight: '600',
+			fontWeight: '400',
 			textTransform: 'capitalize',
 		},
+	},
+	headerCat: {
+		paddingBottom:'2rem',
+		fontFamily:'Exo 2 !important',
 	},
 };
 

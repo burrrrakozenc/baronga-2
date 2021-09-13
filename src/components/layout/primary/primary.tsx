@@ -11,6 +11,7 @@ import Footer from './footer/footer';
 import styles from './primary.style';
 import 'bootstrap/dist/css/bootstrap.min.css'
 import SimpleReactLightbox from 'simple-react-lightbox'
+import '../../custom-style/font.css'
 
 const PrimaryLayout: React.FunctionComponent<{
 	fluid?: boolean;

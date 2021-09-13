@@ -60,6 +60,7 @@ const ProductGrid: React.FC<PropsType> = ({
 										shopifyId={shopifyId}
 										availableForSale={availableForSale}
 										price={getPrice(firstVariant?.priceV2)}
+										oldPrice={firstVariant?.compareAtPriceV2 ? getPrice(firstVariant?.compareAtPriceV2) : null}
 										thumbnail={firstImage?.localFile?.childImageSharp?.fluid}
 										variants={variants}
 									/>

@@ -18,6 +18,7 @@ import {AiOutlineShoppingCart} from 'react-icons/ai';
 
 type PropsType = {
 	price: any;
+	oldPrice: any;
 	path: string;
 	title: string;
 	thumbnail: any;
@@ -31,6 +32,7 @@ const ProductCardWithLink: React.FC<PropsType> = (product) => {
 		path,
 		title,
 		price,
+		oldPrice,
 		variants,
 		variants: [initialVariant],
 		thumbnail,
@@ -69,6 +71,12 @@ const ProductCardWithLink: React.FC<PropsType> = (product) => {
 		},
 		[client.product, productVariant.shopifyId, variants]
 	);
+	
+	// const currentPrice = parseFloat(productVariant?.price);
+
+	
+	// console.log(oldPrice)
+	// console.log(currentPrice)
 
 	useEffect(() => {
 		setQuantity(cartProductQuantity);
@@ -84,7 +92,7 @@ const ProductCardWithLink: React.FC<PropsType> = (product) => {
 			setShowCounter(false);
 		}
 	};
-
+	 
 	const handleAddToCart = () => {
 		if (!available) {
 			return false;
@@ -96,6 +104,7 @@ const ProductCardWithLink: React.FC<PropsType> = (product) => {
 				thumbnail,
 				quantity: 1,
 				price: productVariant.priceV2.amount,
+				// oldPrice: productVariant.compareAtPriceV2.amount,
 				currency: productVariant.priceV2.currencyCode,
 				variantId: productVariant.shopifyId,
 			};
@@ -167,9 +176,17 @@ const ProductCardWithLink: React.FC<PropsType> = (product) => {
 						<Text as="span" sx={styles.price}>
 							{price}
 						</Text>
+						{oldPrice ? (<Box as="span" sx={styles.soldOut2}>
+								{oldPrice}
+							</Box>) : ( <p>&nbsp;</p>)}
+						{/* {!oldPrice != null && (
+							<Box as="span" sx={styles.soldOut2}>
+								{oldPrice}
+							</Box>
+						)} */}
 						{!available && (
 							<Box as="span" sx={styles.soldOut}>
-								Sold Out
+								Tükendi
 							</Box>
 						)}
 					</Flex>

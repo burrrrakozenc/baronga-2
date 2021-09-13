@@ -8,6 +8,7 @@ import SocialLinks from '../../../social-links/social-links';
 import styles from './footer.styles';
 import Logo2 from '../../../../images/logo2b.png'
 import './footer.css'
+import { FaWhatsapp } from 'react-icons/fa';
 
 import { FaRegFileAlt, FaYoutubeSquare, FaInstagramSquare, FaFacebookSquare, FaPinterestSquare } from 'react-icons/fa';
 
@@ -89,6 +90,8 @@ const Footer: React.FC<{ fluid?: boolean }> = ({ fluid }) => (
 							<Box style={{ width: '100%', margin: '0 auto', justifyContent: 'center' }}>
 								{/* <SocialLinks items={socialData} /> */}
 								<Box style={{ paddingBottom: 20 }}>
+								<a href="http://wa.me/905399537021">
+								<FaWhatsapp style={{ fontSize: "35px", color:'darkgreen', fontWeight: "bold", paddingLeft: '10px' }} /></a>
 								<a href="https://tr.pinterest.com/barongabaronga/"> <FaPinterestSquare style={{ color: 'red', fontSize: '35px', paddingLeft: '10px' }} /></a>&nbsp;&nbsp;&nbsp;&nbsp;
 								<a href="https://www.facebook.com/barongahandcrafts/"><FaFacebookSquare style={{ color: 'blue', fontSize: '35px', paddingLeft: '10px' }} /></a>&nbsp;&nbsp;&nbsp;&nbsp;
 								<a href="https://www.instagram.com/baronga_handcrafts/"><FaInstagramSquare style={{ color: 'black', fontSize: '30px' }} /></a>&nbsp;&nbsp;&nbsp;&nbsp;

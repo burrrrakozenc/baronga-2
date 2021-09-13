@@ -73,8 +73,23 @@ const styles = {
 		paddingBottom: ['25px', '30px'],
 		marginBottom: ['25px', '30px'],
 	},
+	imageHover:{
+		cursor:'-moz-zoom-in',
+		cursor:'-webkit-zoom-in',
+		cursor:'zoom-in',
+	},
 	price: {
 		color: 'primary',
+		fontSize: '20px',
+		lineHeight: '1.538',
+		fontWeight: 400,
+		'@media only screen and (max-width: 480px)': {
+			fontSize: '20px',
+		},
+	},
+	price2: {
+		color: 'red',
+		textDecoration:'line-through',
 		fontSize: '20px',
 		lineHeight: '1.538',
 		fontWeight: 400,

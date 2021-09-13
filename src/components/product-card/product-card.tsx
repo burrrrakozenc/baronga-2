@@ -171,7 +171,7 @@ const ProductCard: React.FC<PropsType> = (product) => {
 					</Text>
 					{!available && (
 						<Box as="span" sx={styles.soldOut}>
-							Sold Out
+							Tükendi
 						</Box>
 					)}
 				</Flex>

@@ -11,9 +11,11 @@ const styles = {
 			color: 'primary',
 			fontSize: ['17px', 2],
 		},
+		
 	},
 	header: {
 		width: '100%',
+		paddingLeft:'1rem',
 		alignItems: 'center',
 		justifyContent: ['space-between', 'flex-start'],
 		marginBottom: [20, 30],
@@ -23,6 +25,7 @@ const styles = {
 		},
 	},
 	productGrid: {
+		padding:'1rem',
 		gridGap: 30,
 		gridTemplateColumns: [
 			'1fr 1fr',

@@ -262,35 +262,36 @@ class IndexCarousel extends React.PureComponent {
               </div>
             </div>
           </Link>
-          <div>
-            <img src={Dancer} alt="3" />
-            {}
-            <section className="text-right carousel-iframe-x">
-              <p
-                className="carousel-group-iframe-x"
-                style={{
-                  float: 'right',
-                  textTransform: 'uppercase',
-                  textAlign: 'center',
-                  fontFamily: 'Exo 2',
-                  paddingLeft: 5,
-                  paddingRight: 5,
-                }}
-              >
-                <iframe
-                  // style={{ width: 400, marginTop: 100, marginRight: 50 }}
-                  height="180"
-                  width="700"
-                  src="https://www.youtube.com/embed/DPQ7SXMHljQ"
-                  frameBorder="0"
-                  alt="BARONGA"
-                  allowFullScreen
-                  className="carousel-iframe-item"
-                />
-              </p>
-            </section>
-          </div>
-
+          <a href="https://www.youtube.com/channel/UCkHFNyFvD5SjsTbS9UeZy7g">
+            <div>
+              <img src={Dancer} alt="3" />
+              {}
+              <section className="text-right carousel-iframe-x">
+                <p
+                  className="carousel-group-iframe-x"
+                  style={{
+                    float: 'right',
+                    textTransform: 'uppercase',
+                    textAlign: 'center',
+                    fontFamily: 'Exo 2',
+                    paddingLeft: 5,
+                    paddingRight: 5,
+                  }}
+                >
+                  <iframe
+                    // style={{ width: 400, marginTop: 100, marginRight: 50 }}
+                    height="180"
+                    width="700"
+                    src="https://www.youtube.com/embed/DPQ7SXMHljQ"
+                    frameBorder="0"
+                    alt="BARONGA"
+                    allowFullScreen
+                    className="carousel-iframe-item"
+                  />
+                </p>
+              </section>
+            </div>
+          </a>
           {/* </Swiper> */}
         </Carousel>
       </div>

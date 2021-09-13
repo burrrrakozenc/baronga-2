@@ -49,6 +49,7 @@ const ModernHome: React.FC<{}> = () => (
 					<SEO title="Home" />
 					<Link to="/katalog/collection/kanvas-tablo">
 					<HomeBanner
+						
 						bannerTitle={homeBanner?.banner_title}
 						bannerSubTitle={homeBanner?.banner_subtitle}
 						banner={homeBanner?.banner_image?.url}

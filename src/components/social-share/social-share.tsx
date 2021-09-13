@@ -19,7 +19,7 @@ type PropsType = {
 const SocialShare: React.FC<PropsType> = ({ title, url }) => {
 	return (
 		<Flex sx={styles.wrapper}>
-			<Text sx={styles.title}>Share on: &nbsp;</Text>
+			<Text sx={styles.title}>Paylaş: &nbsp;</Text>
 			<FacebookShareButton quote={title} url={url}>
 				<FacebookIcon size={35} round />
 			</FacebookShareButton>

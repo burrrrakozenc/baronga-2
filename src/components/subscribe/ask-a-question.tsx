@@ -30,7 +30,7 @@ const ContactForm = () => {
             paddingTop: 20,
           }}
         >
-          <h4>Urun hakkinda soru sor</h4>
+          <h4>Ürün hakkında soru sor</h4>
         </header>
 
         {/* <p>Elementum sem parturient nulla.</p> */}
@@ -43,7 +43,7 @@ const ContactForm = () => {
                 paddingBottom: 30,
               }}
             >
-              <input type="text" name="name" placeholder="Name" />
+              <input type="text" name="name" placeholder="Adınız" />
             </div>
             <div className="col-6 col-12-mobile" style={{ paddingBottom: 20 }}>
               <input type="text" name="email" placeholder="Email" />
@@ -51,7 +51,7 @@ const ContactForm = () => {
             <div className="col-12">
               <textarea
                 name="message"
-                placeholder="Message"
+                placeholder="Mesaj"
                 style={{
                   height: 200,
                 }}
@@ -65,7 +65,7 @@ const ContactForm = () => {
             >
               <input
                 type="submit"
-                value="Send Message"
+                value="Gönder"
                 style={{
                   backgroundColor: 'rgb(214,86,34)',
                 }}

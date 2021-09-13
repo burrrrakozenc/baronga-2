@@ -16,6 +16,11 @@ const featuredStaticQuery = graphql`
 					variants {
 						id
 						price
+						compareAtPrice
+						compareAtPriceV2 {
+							amount
+							currencyCode
+						}
 						priceV2 {
 							amount
 							currencyCode

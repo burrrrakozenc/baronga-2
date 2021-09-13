@@ -5,6 +5,7 @@ import { graphql } from 'gatsby';
 // import get from 'lodash/get';
 import Img from 'gatsby-image';
 import { SRLWrapper } from 'simple-react-lightbox';
+import styles from './../product-single.style'
 // import JustifiedGrid from 'react-justified-grid';
 
 // import { documentToReactComponents } from '@contentful/rich-text-react-renderer';
@@ -40,6 +41,7 @@ const ProductImage = ({ imageData }) => {
       {/* {imageData.map( (it)  => ( */}
       <img
         key={imageData.id}
+        style={{cursor:'zoom-in'}}
         // 	// key={i}
         // className="gallery-wrapper-custom-xxx"
         src={imageData.localFile.childImageSharp.fluid.src}

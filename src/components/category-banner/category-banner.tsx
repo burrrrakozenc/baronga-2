@@ -19,19 +19,18 @@ const CategoryBanner: React.FC<PropsType> = ({
 }: any) => {
 	// const bgBannerImg = bgImage?.localFile?.childImageSharp?.fluid;
 	const bgBannerImg = bgImage?.src ?? bgImage;
-	const categoryName = title ? title?.replace(/-/g, "/").replace(/Ahsap/,"Ahşap").replace(/Pirinc/,"Pirinç")
-									   .replace(/Taki/,"Takı").replace(/aksesuar/,"Aksesuar")
-									   .replace(/Canta/,"Çanta").replace(/tablo/,"Tablo") : ""
+	const categoryName = title ? title?.replace(/taki-/,"Takı").replace(/aksesuar/,"").replace(/Kanvas-tablo/,"Kanvas Tablo").replace(/-/g, "&").replace(/Pirinc/,"Pirinç")
+									   .replace(/Ahsap/,"Ahşap").replace(/Canta/,"Çanta") : "";
 
 	// if(categoryName === "Heykel-Obje") {
 	// 	categoryName.replace(/Heykel-Obje/, "Heykel/Obje")
 	// }
 	// const categoryName = title.replace(/Heykel-Obje/g, "Heykel/Obje")
-	console.log(subtitle)
+	
 	return (
 		<div>
 		<Box>
-			<Heading style={{color:'black', textAlign:'center',fontFamily:'Exo 2'}} as="h3">{categoryName}</Heading>
+			<Heading sx={styles.headerCat} style={{color:'black', textAlign:'center',fontFamily:'Exo 2',fontWeight:'400'}} as="h3">{categoryName}</Heading>
 			</Box>
 		<Box as="section" sx={styles.wrapper}>
 			

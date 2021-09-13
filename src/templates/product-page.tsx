@@ -26,7 +26,8 @@ import ProductImage from '../components/index-gallery/gallery-item'
 import LikeCount from '../components/subscribe/like-count'
 import '../components/custom-style/gallery-item.css'
 import '../components/custom-style/flexbin.css'
-
+import { FaWhatsapp } from 'react-icons/fa';
+import CategoryBlocks from '../components/category-blocks/secondary/secondary'
 
 const ProductPage: React.FC<any> = ({
 	data: { shopifyProduct, allShopifyProduct, prismic, customApi },
@@ -149,7 +150,7 @@ const ProductPage: React.FC<any> = ({
 		}).format(parseFloat(price && price.amount ? price.amount : 0));
 
 	const totalImage: number = product.images.length;
-		 console.log(product.images.length)
+
 	return (
 		// <SimpleReactLightbox>
 		<PrimaryLayout
@@ -160,103 +161,134 @@ const ProductPage: React.FC<any> = ({
 			showNoticeBar={false}
 		>
 			{/* <ModalProvider> */}
-				<Box sx={styles.wrapper}>
-					<SEO title={product.title} />
-					<Flex sx={styles.product}>
-						<Box
-							className={product?.images.length > 1 ? 'has-items' : ''}
-							sx={styles.image}
-							
-							> 
-							<div className={totalImage === 1 ? `flexbin-single flexbin-margin-single` : `flexbin flexbin-margin gallery-wrapper-custom` }>
-														
+			<Box sx={styles.wrapper}>
+				<SEO title={product.title} />
+				<Flex sx={styles.product}>
+					<Box
+						className={product?.images.length > 1 ? 'has-items' : ''}
+						sx={styles.image}
+
+					>
+						<div className={totalImage === 1 ? `flexbin-single flexbin-margin-single` : `flexbin flexbin-margin gallery-wrapper-custom`}>
+
 							{product?.images.map((item: any) => (
 
-								<ProductImage imageData={item} />
+								<ProductImage key={item.id} imageData={item} />
 							))}
-							</div>
-							
-						</Box>
-						<Box sx={styles.content}>
-							<Box sx={styles.header}>
-								<Heading as="h1">{product.title}</Heading>
-								<Flex>
-									<LikeCount shopifyHandle={product?.handle} />
-									{/* className={product?.images.length > 1 ? 'has-items' : ''} */}
-							
-							<Link to={`/product/${product?.handle}/#ask-a-question`} sx={{
-										display: 'block',
-										paddingTop:'0.7rem',
-										paddingLeft:'1rem'
-									}}>
-										{/* <CommentIcon /> */}
+						</div>
+
+					</Box>
+					<Box sx={styles.content}>
+						<Box sx={styles.header}>
+							<Heading as="h1">{product.title}</Heading>
+							<Flex>
+								<LikeCount shopifyHandle={product?.handle} />
+								{/* className={product?.images.length > 1 ? 'has-items' : ''} */}
+
+								<Link to={`/product/${product?.handle}/#ask-a-question`} sx={{
+									display: 'block',
+									paddingTop: '0.7rem',
+									paddingLeft: '1rem'
+								}}>
+									{/* <CommentIcon /> */}
 								Ürün Hakkında Soru Sor
 
 								</Link>
-								</Flex>
-								<Flex sx={styles.cartArea}>
-									<Text sx={styles.price}>
-										{getPrice(product?.variants[0]?.priceV2)}
-									</Text>
-									<Box
-										className={quantity > 0 && showCounter ? 'isActive' : ''}
-										sx={styles.cart}
-									>
-										{!quantity && (
-											<Button
-												className={addClass.join(' ')}
-												onClick={() => handleAddToCart()}
-												style={{
-													backgroundColor: 'rgb(214,86,34)',
-												}}
-											>
-												Sepete Ekle
-											</Button>
-										)}
-										{quantity ? (
-											<Box ref={counterRef} sx={styles.cartCounter}>
-												<Button
-													title="Decrement"
-													onClick={() => handleQuantityChange(quantity - 1)}
-												>
-													<IoIosRemove />
-												</Button>
-												<Box>{quantity}</Box>
-												<Button
-													title="Increment"
-													onClick={() => handleQuantityChange(quantity + 1)}
-												>
-													<IoIosAdd />
-												</Button>
-											</Box>
-										) : null}
-									</Box>
-								</Flex>
-								<Flex>
-								</Flex>
-							</Box>
+								<a href="http://wa.me/905399537021">
+								<FaWhatsapp style={{ fontSize: "35px",
+								color:'darkgreen',
+								fontWeight: "bold",
+									paddingTop:'0.7rem',
+									paddingLeft: '1rem' }} />
+									</a>
+							</Flex>
+							<Flex sx={styles.cartArea}>
+								<Text sx={styles.price}>
+									{product?.variants[0]?.compareAtPrice ? (<Text sx={styles.price2}>{getPrice(product?.variants[0]?.compareAtPriceV2)}</Text>) : (<p>&nbsp;</p>)}
+									{getPrice(product?.variants[0]?.priceV2)}
+								</Text>
 
-							{/* <Text as="p">{product?.description}</Text> */}
-							<Text style={{
-								paddingBottom: 50
-							}}><div dangerouslySetInnerHTML={{ __html: product?.descriptionHtml, }} /></Text>
-							<SocialShare title={product?.title} url={href} />
+								<Box
+									className={quantity > 0 && showCounter ? 'isActive' : ''}
+									sx={styles.cart}
+								>
+									{!quantity && (
+										<Button
+											className={addClass.join(' ')}
+											onClick={() => handleAddToCart()}
+											style={{
+												backgroundColor: 'rgb(214,86,34)',
+											}}
+										>
+											Sepete Ekle
+										</Button>
+									)}
+
+									{/* <Button
+										className={addClass.join(' ')}
+										style={{
+											backgroundColor: 'rgb(214,86,34)',
+										}}
+									><a href="https://wa.me"></a>
+										</Button> */}
+
+
+									{quantity ? (
+										<Box ref={counterRef} sx={styles.cartCounter}>
+											<Button
+												title="Decrement"
+												onClick={() => handleQuantityChange(quantity - 1)}
+											>
+												<IoIosRemove />
+											</Button>
+											<Box>{quantity}</Box>
+											<Button
+												title="Increment"
+												onClick={() => handleQuantityChange(quantity + 1)}
+											>
+												<IoIosAdd />
+											</Button>
+										</Box>
+									) : null}
+								</Box>
+
+							</Flex>
+
+							<Flex>
+							</Flex>
 						</Box>
-					</Flex>
-					<ProductGrid
-						id="relatedProducts"
-						gridTitle="Related Products"
-						products={categoryProducts}
-						withLink={true}
-						isCategoryProduct={true}
-					/>
-					<div id="ask-a-question">
-						<AskAQuestion />
-					</div>
-				</Box>
+
+						{/* <Text as="p">{product?.description}</Text> */}
+						<Text style={{
+							paddingBottom: 50
+						}}><div dangerouslySetInnerHTML={{ __html: product?.descriptionHtml, }} /></Text>
+						<SocialShare title={product?.title} url={href} />
+					</Box>
+				</Flex>
+				{/* <ProductGrid
+					id="featured"
+					withLink={withLink}
+					gridTitle="Özel Ürünler"
+					products={products}
+					isCategoryProduct={true}
+				/> */}
+				{console.log(products)}
+				{/* <Box style={{padding:'1rem'}}> */}
+				<ProductGrid
+					id="relatedProducts"
+					gridTitle="Özel Ürünler"
+					products={categoryProducts}
+					withLink={true}
+					isCategoryProduct={true}
+				/>
+				{/* </Box> */}
+				<div id="ask-a-question">
+					<AskAQuestion />
+				</div>
+			</Box>
 			{/* </ModalProvider> */}
 		</PrimaryLayout>
-		
+
 	);
 };
 
@@ -274,6 +306,11 @@ export const pageQuery = graphql`
 			variants {
 				id
 				price
+				compareAtPrice
+				compareAtPriceV2 {
+					amount
+					currencyCode
+				  }
 				priceV2 {
 					amount
 					currencyCode
@@ -303,6 +340,11 @@ export const pageQuery = graphql`
 				  availableForSale
 				  variants {
 					id
+					compareAtPrice
+					compareAtPriceV2 {
+						amount
+						currencyCode
+					  }
 					price
 					priceV2 {
 					  amount

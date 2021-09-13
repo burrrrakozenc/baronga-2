@@ -68,7 +68,7 @@ const CartStatus: React.FC<{ btnProps: any }> = ({ btnProps }) => {
 								fillRule="evenodd"
 							/>
 						</svg>
-						Added {products.length} Items
+						Eklenen ürünler {products.length}
 					</Flex>
 					<Text sx={styles.price}>{totalPrice && getPrice(totalPrice)}</Text>
 				</animated.button>
