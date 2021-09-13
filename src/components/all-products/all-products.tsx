@@ -33,7 +33,7 @@ const productStaticQuery = graphql`
 						originalSrc
 						localFile {
 							childImageSharp {
-								fluid {
+								fluid(quality: 60) {
 									...GatsbyImageSharpFluid_withWebp_tracedSVG
 								}
 							}
