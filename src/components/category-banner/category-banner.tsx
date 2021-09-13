@@ -19,7 +19,8 @@ const CategoryBanner: React.FC<PropsType> = ({
 }: any) => {
 	// const bgBannerImg = bgImage?.localFile?.childImageSharp?.fluid;
 	const bgBannerImg = bgImage?.src ?? bgImage;
-	const categoryName = title ? title?.replace(/taki-/,"Takı").replace(/aksesuar/,"").replace(/Kanvas-tablo/,"Kanvas Tablo").replace(/-/g, "&").replace(/Pirinc/,"Pirinç")
+	const categoryName = title 
+	? title?.replace(/Taki-aksesuar/,"Takı").replace(/Kanvas-tablo/,"Kanvas Tablo").replace(/-/g, "&").replace(/Pirinc/,"Pirinç")
 									   .replace(/Ahsap/,"Ahşap").replace(/Canta/,"Çanta") : "";
 
 	// if(categoryName === "Heykel-Obje") {

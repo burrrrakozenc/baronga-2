@@ -212,7 +212,8 @@ const ProductPage: React.FC<any> = ({
 									className={quantity > 0 && showCounter ? 'isActive' : ''}
 									sx={styles.cart}
 								>
-									{!quantity && (
+									{available &&
+									!quantity && (
 										<Button
 											className={addClass.join(' ')}
 											onClick={() => handleAddToCart()}
@@ -222,8 +223,11 @@ const ProductPage: React.FC<any> = ({
 										>
 											Sepete Ekle
 										</Button>
-									)}
-
+									)
+									}
+									{!available &&
+									(<Text style={{color:'red'}}>Stokta yok </Text>)
+									}
 									{/* <Button
 										className={addClass.join(' ')}
 										style={{
@@ -358,7 +362,7 @@ export const pageQuery = graphql`
 					originalSrc
 					localFile {
 						childImageSharp {
-							fluid(maxWidth: 910, quality: 75) {
+							fluid(maxWidth: 910, quality: 65) {
 								...GatsbyImageSharpFluid_withWebp_tracedSVG
 							}
 						}
