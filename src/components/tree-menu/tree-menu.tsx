@@ -54,7 +54,7 @@ const TreeMenu: React.FC<Props> = ({ items }) => {
 								<Fragment>
 									<CategoryIcon name={item.path} />
 									<Text as="span" sx={styles.menuText}>
-										{item.title}
+										{item.title.replace(/Takı-Aksesuar/,"Takı")}
 									</Text>
 									{/* <FiChevronRight className="chevron" /> */}
 								</Fragment>
@@ -68,7 +68,7 @@ const TreeMenu: React.FC<Props> = ({ items }) => {
 										className={subItem.path === subMenu ? 'active-menu' : ''}
 									>
 										<Link to={`/katalog/collection/${subItem.path}`}>
-											{subItem.title}
+											{subItem.title.replace(/Takı-Aksesuar/,"Takı")}
 										</Link>
 									</Box>
 								))}

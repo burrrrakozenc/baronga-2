@@ -3,7 +3,7 @@ import PrimaryLayout from '../components/layout/primary/primary';
 import styles from '../components/custom-style/about.module.css';
 import 'bootstrap/dist/css/bootstrap.min.css/';
 import '../components/custom-style/contact.css';
-
+import { FaWhatsapp } from 'react-icons/fa';
 // import { Link } from 'gatsby'
 // import Helmet from 'react-helmet'
 
@@ -20,7 +20,19 @@ class Contact extends React.Component {
                 <link rel="canonical" href="http://neferka.design/" />
             </Helmet> */}
         <div className={styles.indexWrapper}>
-          <h2>Bizimle iletişime geçin.</h2>
+          <div>
+            <h2>Bizimle iletişime geçin.</h2>
+            <a href="http://wa.me/905399537021" target="_blank">
+              <FaWhatsapp
+                style={{
+                  fontSize: '35px',
+                  color: 'darkgreen',
+                  fontWeight: 'bold',
+                  paddingLeft: '40px',
+                }}
+              />
+            </a>
+          </div>
           <p>Toplu alım, istek ve şikayetleriniz için bize ulaşın.</p>
           <div class="row">
             <div class="col-12">
@@ -34,7 +46,7 @@ class Contact extends React.Component {
                       type="text"
                       name="name"
                       id="name"
-                      placeholder="Name"
+                      placeholder="İsim"
                     />
                   </div>
                   <div
@@ -52,7 +64,7 @@ class Contact extends React.Component {
                     <textarea
                       name="message"
                       id="message"
-                      placeholder="Message"
+                      placeholder="Mesaj"
                       rows="12"
                     ></textarea>
                   </div>
@@ -62,7 +74,7 @@ class Contact extends React.Component {
                 <li>
                   <input
                     type="submit"
-                    placeholder="Send Message"
+                    placeholder="Gönder"
                     style={{
                       backgroundColor: 'rgb(214,86,34)',
                       width: '12rem',

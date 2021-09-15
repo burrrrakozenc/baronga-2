@@ -5,11 +5,15 @@ import {
 	FacebookShareButton,
 	TwitterShareButton,
 	PinterestShareButton,
+	WhatsappShareButton,
 	FacebookIcon,
 	TwitterIcon,
 	PinterestIcon,
+	WhatsappIcon
+
 } from 'react-share';
 import styles from './social-share.style';
+import { FaWhatsapp } from 'react-icons/fa';
 
 type PropsType = {
 	title: string;
@@ -29,6 +33,9 @@ const SocialShare: React.FC<PropsType> = ({ title, url }) => {
 			<PinterestShareButton media={`${url}`} title={title} url={url}>
 				<PinterestIcon size={35} round />
 			</PinterestShareButton>
+			<WhatsappShareButton title={title} url={url}>
+				<WhatsappIcon size={35} round/>
+			</WhatsappShareButton>
 		</Flex>
 	);
 };

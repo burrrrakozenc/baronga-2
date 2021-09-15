@@ -90,7 +90,7 @@ const Footer: React.FC<{ fluid?: boolean }> = ({ fluid }) => (
 							<Box style={{ width: '100%', margin: '0 auto', justifyContent: 'center' }}>
 								{/* <SocialLinks items={socialData} /> */}
 								<Box style={{ paddingBottom: 20 }}>
-								<a href="http://wa.me/905399537021">
+								<a href="http://wa.me/905399537021" target="_blank">
 								<FaWhatsapp style={{ fontSize: "35px", color:'darkgreen', fontWeight: "bold", paddingLeft: '10px' }} /></a>
 								<a href="https://tr.pinterest.com/barongabaronga/"> <FaPinterestSquare style={{ color: 'red', fontSize: '35px', paddingLeft: '10px' }} /></a>&nbsp;&nbsp;&nbsp;&nbsp;
 								<a href="https://www.facebook.com/barongahandcrafts/"><FaFacebookSquare style={{ color: 'blue', fontSize: '35px', paddingLeft: '10px' }} /></a>&nbsp;&nbsp;&nbsp;&nbsp;

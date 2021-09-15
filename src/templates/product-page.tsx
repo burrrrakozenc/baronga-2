@@ -194,7 +194,7 @@ const ProductPage: React.FC<any> = ({
 								Ürün Hakkında Soru Sor
 
 								</Link>
-								<a href="http://wa.me/905399537021">
+								<a href="http://wa.me/905399537021" target="_blank">
 								<FaWhatsapp style={{ fontSize: "35px",
 								color:'darkgreen',
 								fontWeight: "bold",
@@ -276,11 +276,11 @@ const ProductPage: React.FC<any> = ({
 					products={products}
 					isCategoryProduct={true}
 				/> */}
-				{console.log(products)}
+				
 				{/* <Box style={{padding:'1rem'}}> */}
 				<ProductGrid
 					id="relatedProducts"
-					gridTitle="Özel Ürünler"
+					gridTitle="Önerilen Ürünler"
 					products={categoryProducts}
 					withLink={true}
 					isCategoryProduct={true}

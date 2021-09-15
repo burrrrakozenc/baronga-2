@@ -34,7 +34,6 @@ const styles = {
 			opacity: '100%',
 			color: 'white',
 			fontSize:'18px ' ,
-			textTransform:'capitalize',
 			fontFamily:'Exo 2!important',
 			marginLeft:'10%',
 			// fontSize: ['22px', '28px'],
