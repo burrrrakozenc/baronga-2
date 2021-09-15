@@ -20,9 +20,13 @@ class Contact extends React.Component {
                 <link rel="canonical" href="http://neferka.design/" />
             </Helmet> */}
         <div className={styles.indexWrapper}>
-          <div>
-            <h2>Bizimle iletişime geçin.</h2>
-            <a href="http://wa.me/905399537021" target="_blank">
+          <h2>
+            Bizimle iletişime geçin.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{' '}
+            <a
+              href="http://wa.me/905399537021"
+              target="_blank"
+              style={{ color: 'darkgreen' }}
+            >
               <FaWhatsapp
                 style={{
                   fontSize: '35px',
@@ -32,7 +36,8 @@ class Contact extends React.Component {
                 }}
               />
             </a>
-          </div>
+          </h2>
+
           <p>Toplu alım, istek ve şikayetleriniz için bize ulaşın.</p>
           <div class="row">
             <div class="col-12">
