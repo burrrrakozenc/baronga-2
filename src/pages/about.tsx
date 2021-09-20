@@ -5,7 +5,7 @@ import styles from '../components/custom-style/about.module.css';
 import get from 'lodash/get';
 import Image from 'gatsby-image';
 import { documentToReactComponents } from '@contentful/rich-text-react-renderer';
-import Pratama from '../images/pratamaAbout.jpg'
+import Pratama from '../images/pratamaAboutResized-2.jpg'
 import CategoryBanner from '../components/category-banner/category-banner';
 // import { Link } from 'gatsby'
 // import Helmet from 'react-helmet'

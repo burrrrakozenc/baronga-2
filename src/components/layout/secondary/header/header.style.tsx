@@ -26,8 +26,8 @@ const styles = {
 		},
 		'.picksySearch': {
 			flex: 2,
-			// marginLeft: 70,
-			// marginRight: 70,
+			marginLeft: 10,
+			marginRight: 10,
 			input: {
 				border: '0',
 				backgroundColor: 'lightgray',
@@ -35,6 +35,11 @@ const styles = {
 				'&:focus': {
 					backgroundColor: 'muted',
 				},
+			},
+			'@media only screen and (max-width: 991px)': {
+				
+					marginRight: -200,
+				
 			},
 			'.searchResult': {
 				top: '100px',
@@ -80,6 +85,24 @@ const styles = {
 		display: 'none',
 		'@media only screen and (max-width: 991px)': {
 			display: 'inline-flex',
+		},
+	},
+	searchBtn2: {
+		width:'600px',
+		display: 'inline-flex',	
+		
+		'@media only screen and (max-width: 991px)': {
+			display:'none',	
+		},
+	},
+	searchBtn3: {
+		
+		
+		display:'none',
+		'@media only screen and (max-width: 991px)': {
+			display: 'inline-flex',	
+			// width:'100% !important',
+			
 		},
 	},
 	icons: {

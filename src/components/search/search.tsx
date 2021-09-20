@@ -90,7 +90,7 @@ const Search: React.FC<PropsType> = (props) => {
 					type="text"
 					value={value}
 					onChange={(e) => setValue(e.target.value)}
-					placeholder="What Are You Looking For?"
+					placeholder="Ürünler içerisinde ara"
 					autoComplete="off"
 				/>
 				{value && (

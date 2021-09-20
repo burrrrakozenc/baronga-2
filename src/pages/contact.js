@@ -21,7 +21,7 @@ class Contact extends React.Component {
             </Helmet> */}
         <div className={styles.indexWrapper}>
           <h2>
-            Bizimle iletişime geçin.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{' '}
+            Bizimle iletişime geçin.&nbsp;&nbsp;&nbsp;{' '}
             <a
               href="http://wa.me/905399537021"
               target="_blank"
@@ -32,7 +32,6 @@ class Contact extends React.Component {
                   fontSize: '35px',
                   color: 'darkgreen',
                   fontWeight: 'bold',
-                  paddingLeft: '40px',
                 }}
               />
             </a>

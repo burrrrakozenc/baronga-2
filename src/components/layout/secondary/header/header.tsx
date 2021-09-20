@@ -13,7 +13,7 @@ import Drawer from 'rc-drawer';
 import 'rc-drawer/assets/index.css';
 import Logo from '../../../logo/logo';
 import { Link } from 'gatsby'
-// import Search from '../../../search';
+import Search from '../../../search';
 import Sidebar from '../sidebar/sidebar';
 import DrawerCart from '../../../drawer-cart/drawer-cart';
 import { LocalCartContext } from '../../../../provider/local-cart-provider';
@@ -25,7 +25,7 @@ import styles2 from '../../primary/header/navbar/navbar.style'
 const Header = () => {
 	const [sidebarVisibile, setSidebarVisible] = useState(false);
 	const [cartVisible, setCartVisible] = useState(false);
-	// const [mobileSearch, setMobileSearch] = useState(false);
+	const [mobileSearch, setMobileSearch] = useState(false);
 	const mobileSearchRef = useRef(null!);
 	useOnClickOutside(mobileSearchRef, () => setMobileSearch(false));
 	const { products } = useContext(LocalCartContext);
@@ -39,11 +39,11 @@ const Header = () => {
 	return (
 		<Fragment>
 			<Box as="header" sx={styles.wrapper}>
-				{/* {mobileSearch ? (
+				{mobileSearch ? (
 					<Box sx={styles.mobileSearch} ref={mobileSearchRef}>
 						<Search />
 					</Box>
-				) : ( */}
+				) : (
 					<Fragment>
 						<Flex sx={styles.logoArea}>
 							<Button
@@ -67,9 +67,12 @@ const Header = () => {
 							</Text>
 							</Flex>
 						</Flex>
-						{/* <Search /> */}
+						
 
 						<Box sx={styles.icons}>
+						<Box sx={styles.searchBtn2}>
+						<Search />
+						</Box>
 							{/* <Box sx={styles.navBarBox}>
 								<Flex sx={styles.navMenuItems}> */}
 									<Text 
@@ -103,14 +106,14 @@ const Header = () => {
 									</Text>
 								{/* </Flex>
 							</Box> */}
-							{/* <Button
-								sx={styles.searchBtn}
+							<Button
+								sx={styles.searchBtn3}
 								variant="text"
 								ariaLabel="Search"
 								onClick={() => setMobileSearch(true)}
 							>
 								<AiOutlineSearch />
-							</Button> */}
+							</Button>
 							<Button
 								variant="text"
 								ariaLabel="Sepetindekiler"
@@ -131,7 +134,7 @@ const Header = () => {
 							</Button> */}
 						</Box>
 					</Fragment>
-				{/* )} */}
+				)} 
 			</Box>
 			<Drawer
 				level={null}

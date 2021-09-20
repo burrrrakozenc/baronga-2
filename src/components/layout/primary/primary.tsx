@@ -12,6 +12,7 @@ import styles from './primary.style';
 import 'bootstrap/dist/css/bootstrap.min.css'
 import SimpleReactLightbox from 'simple-react-lightbox'
 import '../../custom-style/font.css'
+import SearchProvider from '../../../provider/search-provider'
 
 const PrimaryLayout: React.FunctionComponent<{
 	fluid?: boolean;
@@ -28,6 +29,7 @@ const PrimaryLayout: React.FunctionComponent<{
 
 	return (
 		<SimpleReactLightbox>
+			<SearchProvider>
 			<Box
 				as="main"
 				sx={{
@@ -55,6 +57,7 @@ const PrimaryLayout: React.FunctionComponent<{
 				</animated.div>
 				<Footer fluid={fluid} />
 			</Box>
+			</SearchProvider>
 		</SimpleReactLightbox>
 	);
 };

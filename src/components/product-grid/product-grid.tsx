@@ -4,6 +4,7 @@ import { Flex, Box, Grid, Heading, Text, jsx, Button } from 'theme-ui';
 import ProductCard from '../product-card/product-card';
 import ProductCardWithLink from '../product-card/with-link';
 import styles from './product-grid.style';
+import {Link} from 'gatsby'
 
 type PropsType = {
 	id?: string;
@@ -31,7 +32,12 @@ const ProductGrid: React.FC<PropsType> = ({
 	return (
 		<Box id={id} sx={styles.wrapper}>
 			<Flex sx={styles.header}>
-				{gridTitle && <Heading as="h3">{gridTitle}</Heading>}
+				{gridTitle && 
+				<Heading as="h3">{gridTitle === `İndirimdekiler` ? (
+				<Link to="/discount">
+					İndirimdekiler
+					</Link>) 
+					: gridTitle}</Heading>}
 				{close && (
 					<Button variant="text" onClick={close}>
 						Clear

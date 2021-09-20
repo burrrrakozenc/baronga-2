@@ -27,6 +27,10 @@ const styles = {
 		// marginLeft:'0',
 		opacity: '100%',
 		justifyContent: 'center',
+		'@media screen and (max-width: 768px)': {
+			marginLeft:'-9.65%',
+			marginBottom:'-55%'
+		},
 		
 		h3: {
 			paddingTop:'1rem',

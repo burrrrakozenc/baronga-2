@@ -11,7 +11,7 @@ import Drawer from 'rc-drawer';
 import 'rc-drawer/assets/index.css';
 import {Link} from 'gatsby'
 import Logo from '../../logo/logo';
-// import Search from '../../search';
+import Search from '../../search';
 import Sidebar from '../secondary/sidebar/sidebar'
 import DrawerCart from '../../drawer-cart/drawer-cart'
 import { LocalCartContext } from '../../../provider/local-cart-provider';
@@ -40,10 +40,10 @@ const Header = () => {
 		<Fragment>
 			<Box as="header" sx={styles.wrapper}>
 				{mobileSearch ? (
-					<div></div>
-					// <Box sx={styles.mobileSearch} ref={mobileSearchRef}>
-					// 	<Search />
-					// </Box>
+					// <div></div>
+					<Box sx={styles.mobileSearch} ref={mobileSearchRef}>
+						<Search />
+					</Box>
 				) : (
 					<Fragment>
 						<Flex sx={styles.logoArea}>
@@ -66,7 +66,7 @@ const Header = () => {
 							BARONGA
 						</h3>
 						</Flex>
-						{/* <Search /> */}
+						<Search />
 						<Box sx={styles.icons}>
 							<ul sx={styles2.mainMenu}>
 								<li sx={styles2.mainMenuItemNavs}>

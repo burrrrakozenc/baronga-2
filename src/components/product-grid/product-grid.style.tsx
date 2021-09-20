@@ -7,8 +7,11 @@ const styles = {
 		':last-child': {
 			marginBottom: 0,
 		},
+		'@media only screen and (max-width: 991px)': {
+			padding: '0.3rem',	
+		},
 		h3: {
-			color: 'primary',
+			color: 'black',
 			fontSize: ['17px', 2],
 		},
 		
@@ -19,6 +22,7 @@ const styles = {
 		alignItems: 'center',
 		justifyContent: ['space-between', 'flex-start'],
 		marginBottom: [20, 30],
+		
 		button: {
 			textDecoration: 'underline',
 			marginLeft: [0, '5px'],
