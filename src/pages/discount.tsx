@@ -11,7 +11,7 @@ const CategoryPage = ({ data }: any) => {
 	// const productsType = pageContext?.handle;
 	// const title = data.title;
 	// const title = productsType.charAt(0).toUpperCase() + productsType.slice(1);
-    const title = "İndirimdeklier"
+    const title = "İndirimdekiler"
 	return (
 		<PrimaryLayout
 			fluid={true}

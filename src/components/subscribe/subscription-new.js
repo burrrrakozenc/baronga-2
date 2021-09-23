@@ -66,9 +66,9 @@ const SubscriptionForm = () => {
       >
         <input
           type="text"
-          aria-label="Your name"
+          aria-label="İsminiz"
           name="fields[first_name]"
-          placeholder="Your name"
+          placeholder="İsminiz"
           className="convert-kit-form-item-2"
           style={{
             display: 'flex',
@@ -93,16 +93,15 @@ const SubscriptionForm = () => {
         />
         <input
           type="email"
-          aria-label="Your email"
+          aria-label="E-mail"
           name="email_address"
           className="convert-kit-form-item-3"
-          placeholder="Your email address"
+          placeholder="E-mail"
           style={{
             display: 'flex',
             justifyContent: 'flex-start',
             alignItems: 'center',
             height: '50px',
-
             borderStyle: 'solid',
             borderWidth: 1,
             borderColor: 'green',

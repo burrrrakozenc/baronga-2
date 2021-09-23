@@ -21,7 +21,7 @@ const CategoryBanner: React.FC<PropsType> = ({
 	const bgBannerImg = bgImage?.src ?? bgImage;
 	const categoryName = title 
 	? title?.replace(/Taki-aksesuar/,"Takı").replace(/Kanvas-tablo/,"Kanvas Tablo").replace(/-/g, "&").replace(/Pirinc/,"Pirinç")
-									   .replace(/Ahsap/,"Ahşap").replace(/Canta/,"Çanta") : "";
+									   .replace(/Ahsap/,"Ahşap").replace(/Canta/,"Çanta").replace(/obje/g, "Obje") : "";
 
 	// if(categoryName === "Heykel-Obje") {
 	// 	categoryName.replace(/Heykel-Obje/, "Heykel/Obje")

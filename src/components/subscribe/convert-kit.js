@@ -67,10 +67,10 @@ const SubscriptionForm = ({ shopifyId }) => {
       >
         <input
           type="text"
-          aria-label="Your name"
+          aria-label="İsminiz"
           name="fields[first_name]"
           value={shopifyId}
-          placeholder="Your name"
+          placeholder="İsminiz"
           className="convert-kit-form-item"
           style={{
             display: 'flex',
@@ -98,7 +98,7 @@ const SubscriptionForm = ({ shopifyId }) => {
           type="email"
           aria-label="Your email"
           name="email_address"
-          placeholder="Your email address"
+          placeholder="E-mail"
           className="convert-kit-form-item"
           style={{
             display: 'flex',
