@@ -30,13 +30,13 @@ const CategoryBanner: React.FC<PropsType> = ({
 	
 	return (
 		<div>
-		<Box>
+		<Box style={{paddingTop:'1.5rem'}}>
 			<Heading sx={styles.headerCat} style={{color:'black', textAlign:'center',fontFamily:'Exo 2',fontWeight:'400'}} as="h3">{categoryName}</Heading>
 			</Box>
 		<Box as="section" sx={styles.wrapper}>
 			
 			
-			{bgBannerImg ? <img src={bgBannerImg} /> : null}
+			{bgBannerImg ? <img sx={styles.image} src={bgBannerImg} /> : null}
 			<Box as="header" sx={styles.bannerContent}>
 				
 				{/* {subtitle && <Text as="p">{subtitle}</Text>} */}

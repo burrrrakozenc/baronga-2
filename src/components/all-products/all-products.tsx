@@ -21,6 +21,11 @@ const productStaticQuery = graphql`
 					variants {
 						id
 						price
+						compareAtPrice
+						compareAtPriceV2 {
+							amount
+							currencyCode
+						}
 						priceV2 {
 							amount
 							currencyCode
@@ -33,7 +38,7 @@ const productStaticQuery = graphql`
 						originalSrc
 						localFile {
 							childImageSharp {
-								fluid(quality: 60) {
+								fluid(quality: 51) {
 									...GatsbyImageSharpFluid_withWebp_tracedSVG
 								}
 							}
@@ -70,17 +75,18 @@ const AllProducts = () => (
 			return (
 				<Box id="allProducts" sx={styles.wrapper}>
 					<Heading as="h3">Tüm Ürünler</Heading>
-					<ProductGrid 
+					{/* <ProductGrid 
 					id="feature"
 					withLink={true}
 					products={products}
-					/>
-					{/* <Grid sx={styles.productGrid}>
+					/> */}
+					<Grid sx={styles.productGrid}>
 						{products &&
 							products.slice(0, visible).map((product: any) => {
 								const {
 									id,
 									title,
+									handle,
 									shopifyId,
 									variants,
 									availableForSale,
@@ -96,13 +102,15 @@ const AllProducts = () => (
 										price={getPrice(firstVariant?.priceV2)}
 										thumbnail={firstImage?.localFile?.childImageSharp?.fluid}
 										variants={variants}
+										oldPrice={firstVariant?.compareAtPriceV2 ? getPrice(firstVariant?.compareAtPriceV2) : null}
+										path={`/product/${handle}`}
 									/>
 								);
 							})}
-					</Grid> */}
+					</Grid>
 					{visible < products?.length && (
 						<Button sx={styles.loadMoreBtn} onClick={handleLoadMore}>
-							{loading ? <Loader /> : "Show more"}
+							{loading ? <Loader /> : "Daha fazla ürün göster"}
 						</Button>
 					)}
 				</Box>

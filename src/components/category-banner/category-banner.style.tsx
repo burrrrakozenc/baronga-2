@@ -48,6 +48,11 @@ const styles = {
 		paddingBottom:'2rem',
 		fontFamily:'Exo 2 !important',
 	},
+	image: {
+		'@media only screen and (max-width: 600px)': {
+			width:'900px',	
+		},
+	}
 };
 
 export default styles;
