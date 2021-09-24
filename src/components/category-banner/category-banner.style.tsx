@@ -47,9 +47,7 @@ const styles = {
 	headerCat: {
 		paddingBottom:'2rem',
 		fontFamily:'Exo 2 !important',
-		'@media only screen and (max-width: 600px)': {
-			paddingTop:'2rem',	
-		},
+		
 	},
 	image: {
 		'@media only screen and (max-width: 600px)': {
