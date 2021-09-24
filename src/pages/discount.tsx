@@ -4,7 +4,7 @@ import SEO from '../components/seo';
 import PrimaryLayout from '../components/layout/primary/primary';
 import CategoryBanner from '../components/category-banner/category-banner';
 import ProductGrid from '../components/product-grid/product-grid';
-import BannerImg from '../images/tasHeykelResized.jpg'
+import BannerImg from '../images/indirimdekiler-2.jpg'
 
 const CategoryPage = ({ data }: any) => {
 	const { nodes } = data.allShopifyProduct;
