@@ -4,44 +4,42 @@ import ProductGrid from '../product-grid/product-grid';
 
 const featuredStaticQuery = graphql`
 	query {
-		allShopifyProduct(filter: { tags: { eq: "featured222" } }, limit: 10) {
-			edges {
-				node {
-					id
-					title
-					handle
-					createdAt
-					shopifyId
-					availableForSale
-					variants {
-						id
-						price
-						compareAtPrice
-						compareAtPriceV2 {
-							amount
-							currencyCode
-						}
-						priceV2 {
-							amount
-							currencyCode
-						}
-						shopifyId
-						availableForSale
-					}
-					images {
-						id
-						originalSrc
-						localFile {
-							childImageSharp {
-								fluid {
-									...GatsbyImageSharpFluid_withWebp_tracedSVG
-								}
-							}
-						}
-					}
-				}
-			}
-		}
+		allShopifyProduct(filter: {variants: {elemMatch: {compareAtPriceV2: {amount: {ne: null}}}}}, limit: 10) {
+    nodes {
+      id
+      title
+      handle
+      createdAt
+      shopifyId
+      availableForSale
+      variants {
+        id
+        price
+        compareAtPrice
+        compareAtPriceV2 {
+          amount
+          currencyCode
+        }
+        priceV2 {
+          amount
+          currencyCode
+        }
+        shopifyId
+        availableForSale
+      }
+      images {
+        id
+        originalSrc
+        localFile {
+          childImageSharp {
+            fluid {
+				...GatsbyImageSharpFluid_withWebp_tracedSVG
+            }
+          }
+        }
+      }
+    }
+  }
 	}
 `;
 
