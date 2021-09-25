@@ -1,9 +1,10 @@
 /** @jsx jsx */
 import { useState, useEffect } from 'react';
 import { RichText } from 'prismic-reactjs';
-import Link from 'gatsby'
+import {Link} from 'gatsby'
 import { Box, Text, Button, jsx } from 'theme-ui';
-import AnchorLink from 'react-anchor-link-smooth-scroll';
+// import AnchorLink from 'react-anchor-link-smooth-scroll';
+
 import { ArrowRight } from '../icons';
 import useWindowSize from '../../hooks/useWindowSize';
 import styles from './home-banner.style';
@@ -36,6 +37,7 @@ const HomeBanner: React.FC<Props> = ({
 	}, [windowSize]);
 	const mainTitle = RichText.render(bannerTitle)
 	return (
+		<Link to="/katalog/collection/kanvas-tablo" >
 		<Box
 			as="section"
 			sx={{
@@ -44,7 +46,7 @@ const HomeBanner: React.FC<Props> = ({
 			}}
 			className="home-banner"
 		>
-			<AnchorLink to="/" sx={styles.anchorLink}>
+			{/* <AnchorLink sx={styles.anchorLink}> */}
 				<Box as="header" sx={styles.bannerContent}>
 					<Box sx={styles.opacBackgroud}>
 						<h2 sx={styles.opacBackgroud.h2}>Geleneksel Bali Kanvas Tabloları'nı Keşfedin</h2>
@@ -67,8 +69,9 @@ const HomeBanner: React.FC<Props> = ({
 					</AnchorLink>
 				)} */}
 				</Box>
-			</AnchorLink>
+			{/* </AnchorLink> */}
 		</Box>
+		</Link>
 	);
 };
 

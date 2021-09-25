@@ -47,7 +47,7 @@ const ModernHome: React.FC<{}> = () => (
 			return (
 				<SecondaryLayout>
 					<SEO title="Home" />
-					<Link to="/katalog/collection/kanvas-tablo">
+					{/* <Link to="/katalog/collection/kanvas-tablo"> */}
 					<HomeBanner
 						
 						bannerTitle={homeBanner?.banner_title}
@@ -55,7 +55,7 @@ const ModernHome: React.FC<{}> = () => (
 						banner={homeBanner?.banner_image?.url}
 						showActionBtn={false}
 					/>
-					</Link>
+					{/* </Link> */}
 					<AdBanner data={adBlocks} scrollTo="#allProducts" scrollOffset={70} />
 					<AllProducts />
 				</SecondaryLayout>

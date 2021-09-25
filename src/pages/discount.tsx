@@ -4,7 +4,8 @@ import SEO from '../components/seo';
 import PrimaryLayout from '../components/layout/primary/primary';
 import CategoryBanner from '../components/category-banner/category-banner';
 import ProductGrid from '../components/product-grid/product-grid';
-import BannerImg from '../images/indirimdekiler-2.jpg'
+import BannerImg from '../images/indirimdekiler-3.jpg'
+import '../components/custom-style/discount.css'
 
 const CategoryPage = ({ data }: any) => {
 	const { nodes } = data.allShopifyProduct;
@@ -20,7 +21,7 @@ const CategoryPage = ({ data }: any) => {
 			showNoticeBar={false}
 		>
 			{/* <SEO title={title} /> */}
-			<CategoryBanner title={title} bgImage={BannerImg} />
+			<CategoryBanner title={title} bgImage={BannerImg} className="banner-wrapper"/>
 			<ProductGrid
 				id="category"
 				products={nodes}
