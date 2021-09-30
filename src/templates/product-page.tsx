@@ -150,6 +150,26 @@ const ProductPage: React.FC<any> = ({
 		}).format(parseFloat(price && price.amount ? price.amount : 0));
 
 	const totalImage: number = product.images.length;
+	const imageArray = product.images;
+
+
+	// var arr = ['a', 'b', 'c', 'd', 'e', 'f'];
+
+	// var indexToSplit = imageArray.indexOf(1);
+	// var first = imageArray.slice(0, indexToSplit);
+	// var second = imageArray.slice(indexToSplit + 1);
+
+	// console.log({first, second});
+
+
+	const chunkSize = 1;
+	// const arr = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17];
+	const groups = imageArray.map((e, i) => {
+		return i % 1 === 0 ? imageArray.slice(i, i + 1) : null;
+	}).filter(e => { return e; });
+	// console.log({groups})
+
+
 
 	return (
 		// <SimpleReactLightbox>
@@ -169,14 +189,18 @@ const ProductPage: React.FC<any> = ({
 						sx={styles.image}
 
 					>
-						<div className={totalImage === 1 ? `flexbin-single flexbin-margin-single` : totalImage === 2 ? `flexbin-2 flexbin-margin-2 gallery-wrapper-custom-2` : `flexbin flexbin-margin gallery-wrapper-custom`}>
-
-							{product?.images.map((item: any) => (
+						<div className={`flexbin-2 flexbin-margin-2 gallery-wrapper-custom-2`}>
+						{/* <div className={totalImage === 1 ? `flexbin-2 flexbin-margin-2 gallery-wrapper-custom-2` : totalImage === 2 ? `flexbin-2 flexbin-margin-2 gallery-wrapper-custom-2` : `flexbin flexbin-margin gallery-wrapper-custom`}> */}
+							{product?.images.slice(0, 1).map((item: any) => (
 
 								<ProductImage key={item.id} imageData={item} />
 							))}
 						</div>
-
+						<div className={`flexbin flexbin-margin gallery-wrapper-custom`}>
+							{product?.images?.slice(1, totalImage).map((item: any) => (
+								<ProductImage key={item.id} imageData={item} />
+							))}
+						</div>
 					</Box>
 					<Box sx={styles.content}>
 						<Box sx={styles.header}>
@@ -195,12 +219,14 @@ const ProductPage: React.FC<any> = ({
 
 								</Link>
 								<a href="http://wa.me/905399537021" target="_blank">
-								<FaWhatsapp style={{ fontSize: "35px",
-								color:'darkgreen',
-								fontWeight: "bold",
-									paddingTop:'0.7rem',
-									paddingLeft: '1rem' }} />
-									</a>
+									<FaWhatsapp style={{
+										fontSize: "35px",
+										color: 'darkgreen',
+										fontWeight: "bold",
+										paddingTop: '0.7rem',
+										paddingLeft: '1rem'
+									}} />
+								</a>
 							</Flex>
 							<Flex sx={styles.cartArea}>
 								<Text sx={styles.price}>
@@ -213,20 +239,20 @@ const ProductPage: React.FC<any> = ({
 									sx={styles.cart}
 								>
 									{available &&
-									!quantity && (
-										<Button
-											className={addClass.join(' ')}
-											onClick={() => handleAddToCart()}
-											style={{
-												backgroundColor: 'rgb(214,86,34)',
-											}}
-										>
-											Sepete Ekle
-										</Button>
-									)
+										!quantity && (
+											<Button
+												className={addClass.join(' ')}
+												onClick={() => handleAddToCart()}
+												style={{
+													backgroundColor: 'rgb(214,86,34)',
+												}}
+											>
+												Sepete Ekle
+											</Button>
+										)
 									}
 									{!available &&
-									(<Text style={{color:'red'}}>Stokta yok </Text>)
+										(<Text style={{ color: 'red' }}>Stokta yok </Text>)
 									}
 									{/* <Button
 										className={addClass.join(' ')}
@@ -276,7 +302,7 @@ const ProductPage: React.FC<any> = ({
 					products={products}
 					isCategoryProduct={true}
 				/> */}
-				
+
 				{/* <Box style={{padding:'1rem'}}> */}
 				<ProductGrid
 					id="relatedProducts"

@@ -35,6 +35,15 @@
   flex-direction: column;
   object-fit: fill;
 }
+.gallery-wrapper-custom-2 {
+  /* width: 100rem; */
+  /* Prevent vertical gaps */
+  /* width: 1%; */
+  /* display: flex;
+  flex-direction: column;
+  object-fit: fill; */
+  height: auto;
+}
 
 .gallery-wrapper-custom-x .gallery-wrapper-custom-xxx {
   /* Just in case there are inline attributes */
