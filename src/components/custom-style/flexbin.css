@@ -7,7 +7,7 @@
 .flexbin:after {
   content: '';
   flex-grow: 999999999;
-  min-width: 320px;
+  min-width: 300px;
   height: 0;
 }
 .flexbin > * {
@@ -16,11 +16,11 @@
   height: 300px;
   margin: 2.5px;
   flex-grow: 1;
-  max-width: 293px;
+  max-width: 280px;
 }
 .flexbin > * > img {
   height: 300px;
-  width: 320px;
+  width: 30px;
   object-fit: cover;
   max-width: 100%;
   min-width: 100%;
