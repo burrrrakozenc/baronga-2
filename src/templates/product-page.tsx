@@ -364,6 +364,42 @@ export const pageQuery = graphql`
 			}
 		}
 		related: allShopifyProduct(filter: {productType: {eq: $productType}}, limit: 10) {
+			nodes {
+				id
+				title
+				handle
+				createdAt
+				shopifyId
+				availableForSale
+				variants {
+				  id
+				  compareAtPrice
+				  compareAtPriceV2 {
+					  amount
+					  currencyCode
+					}
+				  price
+				  priceV2 {
+					amount
+					currencyCode
+				  }
+				  shopifyId
+				  availableForSale
+				}
+				images {
+				  id
+				  originalSrc
+				  localFile {
+					  childImageSharp {
+						  fluid(maxWidth: 910, quality: 65) {
+							  ...GatsbyImageSharpFluid_withWebp_tracedSVG
+						  }
+					  }
+				  }
+				}
+			  }
+		}
+		featured: allShopifyProduct(filter: { tags: { eq: "featured111" } }, limit: 10) {
 			  nodes {
 				  id
 				  title
@@ -399,39 +435,7 @@ export const pageQuery = graphql`
 				  }
 				}
 		  }
-		  featured: allShopifyProduct(filter: { tags: { eq: "featured111" } }, limit: 10) {
-			edges {
-				node {
-					id
-					title
-					handle
-					createdAt
-					shopifyId
-					availableForSale
-					variants {
-						id
-						price
-						priceV2 {
-							amount
-							currencyCode
-						}
-						shopifyId
-						availableForSale
-					}
-					images {
-						id
-						originalSrc
-						localFile {
-							childImageSharp {
-								fluid {
-									...GatsbyImageSharpFluid_withWebp_tracedSVG
-								}
-							}
-						}
-					}
-				}
-			}
-		}
+		  
 		customApi(subscriptions: {elemMatch: {subscriber: {first_name: {eq: $handle}}}}) {
 			total_subscriptions
 		}
@@ -439,3 +443,39 @@ export const pageQuery = graphql`
 `;
 
 export default ProductPage;
+
+
+
+// featured: allShopifyProduct(filter: { tags: { eq: "featured111" } }, limit: 10) {
+// 	edges {
+// 		node {
+// 			id
+// 			title
+// 			handle
+// 			createdAt
+// 			shopifyId
+// 			availableForSale
+// 			variants {
+// 				id
+// 				price
+// 				priceV2 {
+// 					amount
+// 					currencyCode
+// 				}
+// 				shopifyId
+// 				availableForSale
+// 			}
+// 			images {
+// 				id
+// 				originalSrc
+// 				localFile {
+// 					childImageSharp {
+// 						fluid {
+// 							...GatsbyImageSharpFluid_withWebp_tracedSVG
+// 						}
+// 					}
+// 				}
+// 			}
+// 		}
+// 	}
+// }
