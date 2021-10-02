@@ -30,14 +30,15 @@ import { FaWhatsapp } from 'react-icons/fa';
 import CategoryBlocks from '../components/category-blocks/secondary/secondary'
 
 const ProductPage: React.FC<any> = ({
-	data: { shopifyProduct, allShopifyProduct, prismic, customApi },
+	data: { shopifyProduct, related, featured, customApi },
 	location: { href },
 }) => {
 	let product = shopifyProduct;
 	product.listView = false;
-
+	
 	const productLike = customApi?.total_subscriptions;
-	const categoryProducts = allShopifyProduct?.nodes || [];
+	const categoryProducts = related?.nodes || [];
+	const secondCategoryProducts = featured?.nodes || [];
 	const {
 		title,
 		price,
@@ -160,13 +161,6 @@ const ProductPage: React.FC<any> = ({
 	// var second = imageArray.slice(indexToSplit + 1);
 
 	// console.log({first, second});
-
-
-	const chunkSize = 1;
-	// const arr = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17];
-	const groups = imageArray.map((e, i) => {
-		return i % 1 === 0 ? imageArray.slice(i, i + 1) : null;
-	}).filter(e => { return e; });
 	// console.log({groups})
 
 
@@ -304,13 +298,22 @@ const ProductPage: React.FC<any> = ({
 				/> */}
 
 				{/* <Box style={{padding:'1rem'}}> */}
-				<ProductGrid
+
+				<CategoryBlocks 
+				products={categoryProducts}
+				gridTitle="Önerilen Ürünler"
+				/>
+				<CategoryBlocks 
+				products={secondCategoryProducts}
+				gridTitle="Özel Ürünler"
+				/>
+				{/* <ProductGrid
 					id="relatedProducts"
 					gridTitle="Önerilen Ürünler"
 					products={categoryProducts}
 					withLink={true}
 					isCategoryProduct={true}
-				/>
+				/> */}
 				{/* </Box> */}
 				<div id="ask-a-question">
 					<AskAQuestion />
@@ -360,7 +363,7 @@ export const pageQuery = graphql`
 				}
 			}
 		}
-		allShopifyProduct(filter: {productType: {eq: $productType}}, limit: 10) {
+		related: allShopifyProduct(filter: {productType: {eq: $productType}}, limit: 10) {
 			  nodes {
 				  id
 				  title
@@ -396,6 +399,39 @@ export const pageQuery = graphql`
 				  }
 				}
 		  }
+		  featured: allShopifyProduct(filter: { tags: { eq: "featured111" } }, limit: 10) {
+			edges {
+				node {
+					id
+					title
+					handle
+					createdAt
+					shopifyId
+					availableForSale
+					variants {
+						id
+						price
+						priceV2 {
+							amount
+							currencyCode
+						}
+						shopifyId
+						availableForSale
+					}
+					images {
+						id
+						originalSrc
+						localFile {
+							childImageSharp {
+								fluid {
+									...GatsbyImageSharpFluid_withWebp_tracedSVG
+								}
+							}
+						}
+					}
+				}
+			}
+		}
 		customApi(subscriptions: {elemMatch: {subscriber: {first_name: {eq: $handle}}}}) {
 			total_subscriptions
 		}
