@@ -250,12 +250,15 @@
   .flexbin-2 > * {
     position: relative;
     display: block;
-    height: 150px;
+    /* height: 150px; */
     margin: 2.5px;
+    width: 150px;
     flex-grow: 1;
   }
   .flexbin-2 > * > img {
-    height: 150px;
+    /* height: auto; */
+    width: 150px;
+    height: auto;
     object-fit: cover;
     max-width: 100%;
     min-width: 100%;
@@ -294,6 +297,143 @@
     vertical-align: bottom;
   }
   .flexbin-2.flexbin-margin {
+    margin: 2.5px;
+  }
+}
+
+@media (max-width: 980px) {
+  .flexbin-3 {
+    display: flex;
+    overflow: hidden;
+    flex-wrap: wrap;
+    margin: -2.5px;
+  }
+  .flexbin-3:after {
+    content: '';
+    flex-grow: 999999999;
+    min-width: 100%;
+    height: auto;
+    height: 0;
+  }
+  .flexbin-3 > * {
+    position: relative;
+    display: block;
+    /* height: 150px; */
+    margin: 2.5px;
+    width: 100%;
+    height: auto;
+    flex-grow: 1;
+  }
+  .flexbin-3 > * > img {
+    /* height: auto; */
+    width: 150px;
+    height: auto;
+    object-fit: cover;
+    max-width: 100%;
+    min-width: 100%;
+    vertical-align: bottom;
+  }
+  .flexbin-3.flexbin-margin {
+    margin: 2.5px;
+  }
+}
+
+@media (max-width: 400px) {
+  .flexbin-3 {
+    display: flex;
+    overflow: hidden;
+    flex-wrap: wrap;
+    margin: -2.5px;
+  }
+  .flexbin-3:after {
+    content: '';
+    flex-grow: 999999999;
+    min-width: 100px;
+    height: 0;
+  }
+  .flexbin-3 > * {
+    position: relative;
+    display: block;
+    height: 100px;
+    margin: 2.5px;
+    flex-grow: 1;
+  }
+  .flexbin-3 > * > img {
+    height: 100px;
+    object-fit: cover;
+    max-width: 50%;
+    min-width: 50%;
+    vertical-align: bottom;
+  }
+  .flexbin-3.flexbin-margin {
+    margin: 2.5px;
+  }
+}
+
+@media (max-width: 980px) {
+  .flexbin-4 {
+    display: flex;
+    overflow: hidden;
+    flex-wrap: wrap;
+    margin: -2.5px;
+  }
+  .flexbin-4:after {
+    content: '';
+    flex-grow: 999999999;
+
+    min-width: 100%;
+    height: auto;
+  }
+  .flexbin-4 > * {
+    position: relative;
+    display: block;
+    /* height: 150px; */
+    margin: 2.5px;
+    width: 150px;
+    flex-grow: 1;
+  }
+  .flexbin-4 > * > img {
+    /* height: auto; */
+    width: 150px;
+    height: auto;
+    object-fit: cover;
+    max-width: 100%;
+    min-width: 100%;
+    vertical-align: bottom;
+  }
+  .flexbin-4.flexbin-margin {
+    margin: 2.5px;
+  }
+}
+
+@media (max-width: 400px) {
+  .flexbin-4 {
+    display: flex;
+    overflow: hidden;
+    flex-wrap: wrap;
+    margin: -2.5px;
+  }
+  .flexbin-4:after {
+    content: '';
+    flex-grow: 999999999;
+    min-width: 100px;
+    height: 0;
+  }
+  .flexbin-4 > * {
+    position: relative;
+    display: block;
+    height: 100px;
+    margin: 2.5px;
+    flex-grow: 1;
+  }
+  .flexbin-4 > * > img {
+    height: 100px;
+    object-fit: cover;
+    max-width: 100%;
+    min-width: 100%;
+    vertical-align: bottom;
+  }
+  .flexbin-4.flexbin-margin {
     margin: 2.5px;
   }
 }
