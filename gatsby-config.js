@@ -116,17 +116,18 @@ module.exports = {
     },
     `gatsby-plugin-offline`,
   ],
-  output: {
-    globalObject: `(() => {
-      if (typeof self !== 'undefined') {
-          return self;
-      } else if (typeof window !== 'undefined') {
-          return window;
-      } else if (typeof global !== 'undefined') {
-          return global;
-      } else {
-          return Function('return this')();
-      }
-  })()`,
-  },
+};
+exports.onCreateWebpackConfig = ({ stage, loaders, actions }) => {
+  if (stage === 'build-html') {
+    actions.setWebpackConfig({
+      module: {
+        rules: [
+          {
+            test: /bad-module/,
+            use: loaders.null(),
+          },
+        ],
+      },
+    });
+  }
 };

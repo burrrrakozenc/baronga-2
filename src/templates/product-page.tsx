@@ -163,7 +163,6 @@ const ProductPage: React.FC<any> = ({
 	// console.log({first, second});
 	// console.log({groups})
 
-
 	const [isMobile, setIsMobile] = useState(window.innerWidth < 600);
 
 	{/* Performs similarly to componentDidMount in classes */ }
