@@ -116,4 +116,10 @@ module.exports = {
     },
     `gatsby-plugin-offline`,
   ],
+  output: {
+    library: 'myLib',
+    libraryTarget: 'umd',
+    filename: 'myLib.js',
+    globalObject: 'this',
+  },
 };
