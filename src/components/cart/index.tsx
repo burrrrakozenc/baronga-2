@@ -94,8 +94,8 @@ const CartStatus: React.FC<{ btnProps: any }> = ({ btnProps }) => {
 						) : (
 							<Box sx={styles.notFound}>
 								<Image src={emptyCartSVG} alt="empty cart" />
-								<Text as="h3">Your cart is empty!</Text>
-								<Text as="p">Looks like you haven't made your menu yet.</Text>
+								<Text as="h3">Sepetiniz Boş!</Text>
+								{/* <Text as="p">Looks like you haven't made your menu yet.</Text> */}
 							</Box>
 						)}
 					</Box>

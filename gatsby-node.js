@@ -3,21 +3,6 @@ const path = require(`path`);
 var fs = require('fs');
 var dir = './.cache/caches/gatsby-source-prismic-graphql';
 
-exports.onCreateWebpackConfig = ({ stage, loaders, actions }) => {
-  if (stage === 'build-html') {
-    actions.setWebpackConfig({
-      module: {
-        rules: [
-          {
-            test: /bad-module/,
-            use: loaders.null(),
-          },
-        ],
-      },
-    });
-  }
-};
-
 exports.onPreBootstrap = () => {
   if (!fs.existsSync(dir)) {
     fs.mkdirSync(dir);

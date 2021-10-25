@@ -163,15 +163,29 @@ const ProductPage: React.FC<any> = ({
 	// console.log({first, second});
 	// console.log({groups})
 
-	const [isMobile, setIsMobile] = useState(window.innerWidth < 600);
+	// const window = global.window
+	// const [isMobile, setIsMobile] = useState(window.innerWidth < 600);
 
-	{/* Performs similarly to componentDidMount in classes */ }
-	useEffect(() => {
-		window.addEventListener("resize", () => {
-			const ismobile = window.innerWidth < 1200;
-			if (ismobile !== isMobile) setIsMobile(ismobile);
-		}, false);
-	}, [isMobile])
+	// {/* Performs similarly to componentDidMount in classes */ }
+	// useEffect(() => {
+	// 	window.addEventListener("resize", () => {
+	// 		const ismobile = window.innerWidth < 1200;
+	// 		if (ismobile !== isMobile) setIsMobile(ismobile);
+	// 	}, false);
+	// }, [isMobile])
+
+	
+
+
+ 	const [isMobile, setIsMobile] = useState(window.innerWidth < 600);
+
+ 	{/* Performs similarly to componentDidMount in classes */ }
+ 	useEffect(() => {
+ 		window.addEventListener("resize", () => {
+ 			const ismobile = window.innerWidth < 1200;
+ 			if (ismobile !== isMobile) setIsMobile(ismobile);
+ 		}, false);
+ 	}, [isMobile])
 
 	return (
 		// <SimpleReactLightbox>
@@ -190,31 +204,32 @@ const ProductPage: React.FC<any> = ({
 						className={product?.images.length > 1 ? 'has-items' : ''}
 						sx={styles.image}
 
-					>{isMobile ?
-						(
-							<div className={totalImage === 1 ? `flexbin-4 flexbin-margin-4 gallery-wrapper-custom-4` :  `flexbin-2 flexbin-margin-2 gallery-wrapper-custom-2`}>
-							{/* <div className={`flexbin-2 flexbin-margin-2 gallery-wrapper-custom`}> */}
-								{product?.images?.map((item: any) => (
-									<ProductImage key={item.id} imageData={item} />
-								))}
-							</div>
-						) : (
-							<div>
-								<div className={`flexbin-2 flexbin-margin-2 gallery-wrapper-custom-2`}>
-									{/* <div className={totalImage === 1 ? `flexbin-2 flexbin-margin-2 gallery-wrapper-custom-2` : totalImage === 2 ? `flexbin-2 flexbin-margin-2 gallery-wrapper-custom-2` : `flexbin flexbin-margin gallery-wrapper-custom`}> */}
-									{product?.images.slice(0, 1).map((item: any) => (
+					>
+						{isMobile ?
+ 						(
+ 							<div className={totalImage === 1 ? `flexbin-4 flexbin-margin-4 gallery-wrapper-custom-4` :  `flexbin-2 flexbin-margin-2 gallery-wrapper-custom-2`}>
+ 							{/* <div className={`flexbin-2 flexbin-margin-2 gallery-wrapper-custom`}> */}
+ 								{product?.images?.map((item: any) => (
+ 									<ProductImage key={item.id} imageData={item} />
+ 								))}
+ 							</div>
+ 						) : (
+ 							<div>
+ 								<div className={`flexbin-2 flexbin-margin-2 gallery-wrapper-custom-2`}>
+ 									{/* <div className={totalImage === 1 ? `flexbin-2 flexbin-margin-2 gallery-wrapper-custom-2` : totalImage === 2 ? `flexbin-2 flexbin-margin-2 gallery-wrapper-custom-2` : `flexbin flexbin-margin gallery-wrapper-custom`}> */}
+ 									{product?.images.slice(0, 1).map((item: any) => (
 
-										<ProductImage key={item.id} imageData={item} />
-									))}
-								</div>
-								<div className={`flexbin flexbin-margin gallery-wrapper-custom`}>
-									{product?.images?.slice(1, totalImage).map((item: any) => (
-										<ProductImage key={item.id} imageData={item} />
-									))}
-								</div>
-							</div>
-						)
-						}
+ 										<ProductImage key={item.id} imageData={item} />
+ 									))}
+ 								</div>
+ 								<div className={`flexbin flexbin-margin gallery-wrapper-custom`}>
+ 									{product?.images?.slice(1, totalImage).map((item: any) => (
+ 										<ProductImage key={item.id} imageData={item} />
+ 									))}
+ 								</div>
+ 							</div>
+ 						)
+ 						}
 					</Box>
 					<Box sx={styles.content}>
 						<Box sx={styles.header}>

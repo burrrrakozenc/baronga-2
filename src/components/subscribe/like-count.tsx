@@ -4,7 +4,7 @@ import { Provider, LikeButton } from '@lyket/react';
 const Like = ({ shopifyHandle }) => {
   return (
     <div>
-      <Provider apiKey="pt_f22c2a2953c90ed0727e9188f19a8d">
+      <Provider apiKey="pt_dc75b0c7da03036ef554121abf0973">
         <LikeButton
           namespace="my-blog-post"
           id={shopifyHandle}
