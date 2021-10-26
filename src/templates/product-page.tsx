@@ -338,7 +338,7 @@ const ProductPage: React.FC<any> = ({
 						<Box sx={styles.header}>
 							<Heading as="h1">{product.title}</Heading>
 							<Flex>
-								{/* <LikeCount shopifyHandle={product?.handle} /> */}
+								<LikeCount shopifyHandle={product?.handle} />
 								{/* className={product?.images.length > 1 ? 'has-items' : ''} */}
 
 								<Link to={`/product/${product?.handle}/#ask-a-question`} sx={{
