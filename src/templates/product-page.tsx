@@ -32,6 +32,8 @@ import CategoryBlocks from '../components/category-blocks/secondary/secondary'
 const ProductPage: React.FC<any> = ({
 	data: { shopifyProduct, related, featured, customApi },
 	location: { href },
+	
+	
 }) => {
 	let product = shopifyProduct;
 	product.listView = false;
@@ -174,10 +176,42 @@ const ProductPage: React.FC<any> = ({
 	// 	}, false);
 	// }, [isMobile])
 
+
+
+	
+	// const [isMobile, setIsMobile] = useState(false)
+	// const [screenSize, setScreenSize] = useState({
+	//   height: 1200,
+	//   width: 1200,
+	// })
+	// const updateScreenSize = () => {
+	//   setScreenSize({ width: window.innerWidth, height: window.innerHeight })
+	// }
+	// useEffect(() => {
+	//   if (!isMobile) {
+	// 	setIsMobile(true)
+	// 	updateScreenSize()
+	//   }
+	//   window.addEventListener("resize", updateScreenSize)
+	//   return () => {
+	// 	window.removeEventListener("resize", updateScreenSize)
+	//   }
+	// }, [screenSize])
+
+	const [isMobile, setIsMobile] = useState(window.innerWidth < 600);
+
+	useEffect(() => {
+		if (typeof window === 'undefined') return;
+	  
+		const handleResize = () => setIsMobile(window.innerWidth);
+		window.addEventListener('resize', handleResize);
+		return () => {
+		  window.removeEventListener('resize', handleResize)
+		};
+	  });
 	
 
-
- 	const [isMobile, setIsMobile] = useState(window.innerWidth < 600);
+ 	
 
  	{/* Performs similarly to componentDidMount in classes */ }
  	useEffect(() => {
@@ -186,6 +220,7 @@ const ProductPage: React.FC<any> = ({
  			if (ismobile !== isMobile) setIsMobile(ismobile);
  		}, false);
  	}, [isMobile])
+	 
 
 	return (
 		// <SimpleReactLightbox>
@@ -196,6 +231,7 @@ const ProductPage: React.FC<any> = ({
 			pathPrefix="/minimal/collection"
 			showNoticeBar={false}
 		>
+			{/* <WindowProvider> */}
 			{/* <ModalProvider> */}
 			<Box sx={styles.wrapper}>
 				<SEO title={product.title} />
@@ -212,9 +248,11 @@ const ProductPage: React.FC<any> = ({
  								{product?.images?.map((item: any) => (
  									<ProductImage key={item.id} imageData={item} />
  								))}
+								 {console.log("tadaa here we are")}
  							</div>
  						) : (
  							<div>
+								 {console.log("tadaa here we there")}
  								<div className={`flexbin-2 flexbin-margin-2 gallery-wrapper-custom-2`}>
  									{/* <div className={totalImage === 1 ? `flexbin-2 flexbin-margin-2 gallery-wrapper-custom-2` : totalImage === 2 ? `flexbin-2 flexbin-margin-2 gallery-wrapper-custom-2` : `flexbin flexbin-margin gallery-wrapper-custom`}> */}
  									{product?.images.slice(0, 1).map((item: any) => (
@@ -354,6 +392,7 @@ const ProductPage: React.FC<any> = ({
 					<AskAQuestion />
 				</div>
 			</Box>
+			{/* </WindowProvider> */}
 			{/* </ModalProvider> */}
 		</PrimaryLayout>
 
