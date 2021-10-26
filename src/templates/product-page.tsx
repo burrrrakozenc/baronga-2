@@ -198,20 +198,85 @@ const ProductPage: React.FC<any> = ({
 	//   }
 	// }, [screenSize])
 
-	const [isMobile, setIsMobile] = useState(window.innerWidth < 600);
 
-	useEffect(() => {
-		if (typeof window === 'undefined') return;
+
+	// const [isMobile, setIsMobile] = useState(window.innerWidth < 600);
+
+	// useEffect(() => {
+	// 	if (typeof window === 'undefined') return;
 	  
-		const handleResize = () => setIsMobile(window.innerWidth);
-		window.addEventListener('resize', handleResize);
-		return () => {
-		  window.removeEventListener('resize', handleResize)
-		};
-	  });
+	// 	const handleResize = () => setIsMobile(window.innerWidth);
+	// 	window.addEventListener('resize', handleResize);
+	// 	return () => {
+	// 	  window.removeEventListener('resize', handleResize)
+	// 	};
+	//   });
 	
 
+
+	let defaultHeight
+	let defaultWidth
+
+	if (typeof window !== `undefined`) {
+  	defaultHeight = window.innerHeight
+  	defaultWidth = window.innerWidth
+	}
+
+	const useWindowSize = () => {
+  	const [dimensions, setDimensions] = useState({
+    windowHeight: defaultHeight,
+    windowWidth: defaultWidth,
+  	})
+
+  useEffect(() => {
+    const handler = () => setDimensions({
+      windowHeight: window.innerHeight,
+      windowWidth: window.innerWidth,
+    })
+
+    window.addEventListener(`resize`, handler)
+    return () => window.removeEventListener(`resize`, handler)
+  }, [])
+
+  return dimensions
+}
+
+
+
+
+	const [isMobile, setIsMobile] = useState(false)
+	const [screenSize, setScreenSize] = useState({
+	  height: 1200,
+	  width: 1200,
+	})
+	const updateScreenSize = () => {
+	  setScreenSize({ width: window.innerWidth, height: window.innerHeight })
+	}
+	useEffect(() => {
+	  if (!isMobile) {
+		setIsMobile(true)
+		updateScreenSize()
+	  }
+	  window.addEventListener("resize", updateScreenSize)
+	  return () => {
+		window.removeEventListener("resize", updateScreenSize)
+	  }
+	}, [screenSize])
+
+
+
  	
+	// const [isMobile, setIsMobile] = useState(window.innerWidth < 600);
+
+	// useEffect(() => {
+	// 	if (typeof window === 'undefined') return;
+	  
+	// 	const handleResize = () => setIsMobile(window.innerWidth);
+	// 	window.addEventListener('resize', handleResize);
+	// 	return () => {
+	// 	  window.removeEventListener('resize', handleResize)
+	// 	};
+	//   });
 
  	{/* Performs similarly to componentDidMount in classes */ }
  	useEffect(() => {
@@ -273,7 +338,7 @@ const ProductPage: React.FC<any> = ({
 						<Box sx={styles.header}>
 							<Heading as="h1">{product.title}</Heading>
 							<Flex>
-								<LikeCount shopifyHandle={product?.handle} />
+								{/* <LikeCount shopifyHandle={product?.handle} /> */}
 								{/* className={product?.images.length > 1 ? 'has-items' : ''} */}
 
 								<Link to={`/product/${product?.handle}/#ask-a-question`} sx={{
