@@ -338,6 +338,42 @@
   }
 }
 
+.flexbin-4 {
+  display: flex;
+  overflow: hidden;
+  flex-wrap: wrap;
+  margin: -2.5px;
+  justify-content: center;
+}
+.flexbin-4:after {
+  content: '';
+  flex-grow: 999999999;
+  min-width: 100%;
+  height: 0;
+  justify-content: center;
+}
+.flexbin-4 > * {
+  position: relative;
+  display: block;
+  height: auto;
+  margin: 2.5px;
+  flex-grow: 1;
+  width: 48%;
+  /* max-width: auto; */
+}
+.flexbin-4 > * > img {
+  height: auto;
+  width: 100%;
+  object-fit: cover;
+  max-width: 100%;
+  min-width: 100%;
+  width: 48%;
+  vertical-align: bottom;
+}
+.flexbin-4.flexbin-margin-4 {
+  margin: 2.5px;
+}
+
 @media (max-width: 400px) {
   .flexbin-3 {
     display: flex;

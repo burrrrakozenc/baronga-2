@@ -308,13 +308,22 @@ const ProductPage: React.FC<any> = ({
 					>
 						{isMobile ?
  						(
- 							<div className={totalImage === 1 ? `flexbin-4 flexbin-margin-4 gallery-wrapper-custom-4` :  `flexbin-2 flexbin-margin-2 gallery-wrapper-custom-2`}>
- 							{/* <div className={`flexbin-2 flexbin-margin-2 gallery-wrapper-custom`}> */}
- 								{product?.images?.map((item: any) => (
- 									<ProductImage key={item.id} imageData={item} />
- 								))}
-								 {console.log("tadaa here we are")}
- 							</div>
+							<div>
+							{console.log("tadaaaaa here we there")}
+							<div className={totalImage === 1 ? `flexbin-4 flexbin-margin-4 gallery-wrapper-custom-2` :  `flexbin-4 flexbin-margin-4 gallery-wrapper-custom-2`}>
+								{/* <div className={totalImage === 1 ? `flexbin-2 flexbin-margin-2 gallery-wrapper-custom-2` : totalImage === 2 ? `flexbin-2 flexbin-margin-2 gallery-wrapper-custom-2` : `flexbin flexbin-margin gallery-wrapper-custom`}> */}
+								{product?.images.slice(0, 1).map((item: any) => (
+
+									<ProductImage key={item.id} imageData={item} />
+								))}
+							</div>
+							<div className={`flexbin flexbin-margin gallery-wrapper-custom`}>
+								{product?.images?.slice(1, totalImage).map((item: any) => (
+									<ProductImage key={item.id} imageData={item} />
+								))}
+							</div>
+						</div>
+ 							
  						) : (
  							<div>
 								 {console.log("tadaa here we there")}
@@ -618,3 +627,14 @@ export default ProductPage;
 // 		}
 // 	}
 // }
+
+
+
+
+// <div className={totalImage === 1 ? `flexbin-4 flexbin-margin-4 gallery-wrapper-custom-4` :  `flexbin-2 flexbin-margin-2 gallery-wrapper-custom-2`}>
+//  							{/* <div className={`flexbin-2 flexbin-margin-2 gallery-wrapper-custom`}> */}
+//  								{product?.images?.map((item: any) => (
+//  									<ProductImage key={item.id} imageData={item} />
+//  								))}
+								 
+//  							</div>
