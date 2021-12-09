@@ -76,6 +76,7 @@ apollo.config.js
 # GraphQl typegen
 __generated__
 
+
 # .env.example
 now.json
 .env.development
